@@ -1,0 +1,81 @@
+/* #Media Queries
+================================================== */
+/* Tablet Portrait size to standard 960 (devices and browsers) */
+@media only screen and (min-width:768px) and (max-width:959px) {
+	.fade figcaption a { 
+		margin-top: 55px;
+	}
+}
+/* All Mobile Sizes (devices and browser) */
+@media only screen and (max-width:767px) {
+	.nav select { 
+		display: block; 
+		width: 80%; 
+		margin: 5px auto;
+	}
+	.nav ul { 
+		display: none;
+	}
+	.csswinner { 
+		display: none;
+	}
+	.code-content h1 { 
+		margin: 70px 0 0;
+	}
+	#dev-overlay-content a { 
+		margin-top: 50px;
+	}
+}
+/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+@media only screen and (min-width:480px) and (max-width:767px) {
+	.fade figcaption a { 
+		margin-top: 27%;
+	}
+}
+/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+@media only screen and (max-width:479px) {
+	#dev-overlay-content a { 
+		margin-top: 0px;
+	}
+}
+/* Additional large screens 1280+ */
+@media only screen and (min-width:1280px) {}
+/* Specific styles applied to 767+ */
+@media only screen and (min-width:1025px) {
+	body { 
+		font-size: 1em; /* 18px / 16px */
+		line-height: 1.7em;
+	}
+	header.band { 
+		padding: 10% 0 12% 0; 
+		background-image: url(../images/bg-top.jpg); 
+		background-size: 100%; 
+		background-attachment: fixed;
+	}
+	header.band h1 { 
+		font-size: 55px;
+	}
+	a.button { 
+		padding: .90em 1.5em .80em;
+	}
+	footer { 
+		text-align: center;
+	}
+	.iconhov:hover { 
+		opacity: 0.5; 
+		top: -4px;
+	}
+	.skillset:hover, 
+	.portfolio-boxes:hover { 
+		background-color: #fff; 
+		top: -4px;
+	}
+}
+/* #Font-Face
+================================================== */
+/* This is the proper syntax for an @font-face file
+Just create a "fonts" folder at the root, copy your FontName into code below and remove
+comment brackets */
+
+/* @font-face { font-family: 'FontName'; src: url('../fonts/FontName.eot'); src: url('../fonts/FontName.eot?iefix') format('eot'), url('../fonts/FontName.woff') format('woff'), url('../fonts/FontName.ttf') format('truetype'), url('../fonts/FontName.svg#webfontZam02nTh') format('svg'); font-weight: normal; font-style: normal; }
+*/
