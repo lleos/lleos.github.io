@@ -78,7 +78,7 @@ mixpanel.init("60f39f957c2637c7ae6d4eb92dbd0097");</script><!-- end Mixpanel -->
       </div>
       <script type="text/javascript">
         mixpanel.track_links("#about a", "click nav link", {
-            "referrer": document.referrer
+          "referrer": document.referrer
         });
       </script>
     </div>
@@ -244,6 +244,11 @@ mixpanel.init("60f39f957c2637c7ae6d4eb92dbd0097");</script><!-- end Mixpanel -->
         </div>
       </div>
     </div>
+    <script>
+      mixpanel.track_forms("#contact", "Entre em contato", {
+        "referrer": document.referrer
+      });
+    </script>
 
     <footer class="band footer">
       <div class="container">
