@@ -76,6 +76,11 @@ mixpanel.init("60f39f957c2637c7ae6d4eb92dbd0097");</script><!-- end Mixpanel -->
           <li class="last"><a href="#contact">Fale comigo</a></li>
         </ul>
       </div>
+      <script type="text/javascript">
+        mixpanel.track_links(".nav a", "click nav link", {
+            "referrer": document.referrer
+        });
+      </script>
     </div>
 
     <div class="band intro">
