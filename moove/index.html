@@ -3,400 +3,424 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Moove Produções</title>
-
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+    <link href="css/plugins/iCheck/custom.css" rel="stylesheet">
     <link href="css/animate.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
-    <link rel="icon" href="images/favicon.ico" type="image/gif">
+    <link rel="icon" href="img/favicon.ico" type="image/gif">
   </head>
 
-  <body class="top-navigation">
+  <body>
     <div id="wrapper">
-      <div id="page-wrapper" class="gray-bg">
-        <div class="row border-bottom white-bg">
-          <nav class="navbar navbar-static-top" role="navigation">
-            <div class="navbar-header">
-              <button aria-controls="navbar" aria-expanded="false" data-target="#navbar" data-toggle="collapse" class="navbar-toggle collapsed" type="button">
-                <i class="fa fa-reorder"></i>
-              </button>
-              <a href="#" class="navbar-brand">
-                <img src="images/logo.png" alt="Moove" />
+      <nav class="navbar-default navbar-static-side" role="navigation">
+        <div class="sidebar-collapse">
+          <ul class="nav metismenu" id="side-menu">
+            <li class="nav-header">
+              <div class="dropdown profile-element">
+                <span>
+                  <img alt="image" class="img-responsive" src="img/logo-moove.png" />
+                </span>
+              </div>
+              <div class="logo-element">
+                <img alt="image" class="img-circle" src="img/logo.png" />
+              </div>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fa fa-th-large"></i>
+                <span class="nav-label">Eventos</span>
               </a>
-            </div>
-            <div class="navbar-collapse collapse" id="navbar">
-              <ul class="nav navbar-nav">
-                <li><a href="#">Eventos</a></li>
-                <li><a href="#">Contratos</a></li>
-                <li class="active"><a href="#">Pacotes</a></li>
-                <li><a href="#">Itens adicionais</a></li>
-                <li><a href="#">Equipe</a></li>
-              </ul>
-              <ul class="nav navbar-top-links navbar-right">
-                <li class="dropdown">
-                    <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
-                        <i class="fa fa-bell"></i>  <span class="label label-primary">8</span>
-                    </a>
-                    <ul class="dropdown-menu dropdown-alerts">
-                        <li>
-                            <a href="mailbox.html">
-                                <div>
-                                    <i class="fa fa-envelope fa-fw"></i> You have 16 messages
-                                    <span class="pull-right text-muted small">4 minutes ago</span>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a href="profile.html">
-                                <div>
-                                    <i class="fa fa-twitter fa-fw"></i> 3 New Followers
-                                    <span class="pull-right text-muted small">12 minutes ago</span>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a href="grid_options.html">
-                                <div>
-                                    <i class="fa fa-upload fa-fw"></i> Server Rebooted
-                                    <span class="pull-right text-muted small">4 minutes ago</span>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <div class="text-center link-block">
-                                <a href="notifications.html">
-                                    <strong>See All Alerts</strong>
-                                    <i class="fa fa-angle-right"></i>
-                                </a>
-                            </div>
-                        </li>
-                    </ul>
-                </li>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fa fa-file"></i>
+                <span class="nav-label">Contratos</span>
+              </a>
+            </li>
+            <li class="active">
+              <a href="#">
+                <i class="fa fa-cubes"></i>
+                <span class="nav-label">Pacotes</span>
+              </a>
+            </li>
+            <li>
+            <a href="#">
+              <i class="fa fa-cart-plus"></i>
+              <span class="nav-label">Itens adicionais</span>
+            </a>
+            </li>
+            <li>
+            <a href="#">
+              <i class="fa fa-group"></i>
+              <span class="nav-label">Equipe</span>
+            </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fa fa-book"></i>
+                <span class="nav-label">Logs</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <div id="page-wrapper" class="gray-bg">
+        <div class="row border-bottom">
+        <nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0">
+          <div class="navbar-header">
+            <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#">
+              <i class="fa fa-bars"></i>
+            </a>
+          </div>
+          <ul class="nav navbar-top-links navbar-right">
+            <li class="dropdown">
+              <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
+                <i class="fa fa-bell"></i>
+                <span class="label label-primary">1</span>
+              </a>
+              <ul class="dropdown-menu dropdown-alerts">
                 <li>
-                  <a href="login.html">
-                    <i class="fa fa-sign-out"></i> Sair
+                  <a href="#">
+                    <div>
+                      <i class="fa fa-envelope fa-fw"></i> Você tem 2 mensagens
+                    </div>
                   </a>
                 </li>
-              </ul>
-            </div>
-          </nav>
-        </div>
 
-        <div class="wrapper wrapper-content">
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-12">
-                <div class="ibox float-e-margins">
-                  <div class="ibox-title">
-                    <h1>Pacotes</h1>
+                <li class="divider"></li>
+                <li>
+                  <div class="text-center link-block">
+                    <a href="#">
+                      <strong>Veja todas as mensagens</strong>
+                    </a>
                   </div>
-                  <div class="ibox-content">
-                    <table class="table table-hover">
-                      <thead>
-                        <tr>
-                          <th>Código</th>
-                          <th>Nome</th>
-                          <th>Drinks</th>
-                          <th>Equipe</th>
-                          <th>Ações</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td>110</td>
-                          <td>ANIMA SHOW LIGHT</td>
-                          <td>0</td>
-                          <td>22</td>
-                          <td>
-                            <div class="btn-group">
-                              <a id="drop2" href="#" class="dropdown-toggle btn btn-default" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                                <span class="fa fa-gear fa-lg"></span>
-                                <span class="caret"></span>
-                              </a>
-                              <ul class="dropdown-menu dropdown-menu-right">
-                                <li><a href="/products/28/edit">Editar</a></li>
-                                <li><a data-confirm="Tem certeza?" rel="nofollow" data-method="delete" href="/products/28">Apagar</a></li>
-                              </ul>
-                            </div>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>120</td>
-                          <td>DRINK SHOW LIGHT</td>
-                          <td>150</td>
-                          <td>12</td>
-                          <td>
-                            <div class="btn-group">
-                              <a id="drop2" href="#" class="dropdown-toggle btn btn-default" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                                <span class="fa fa-gear fa-lg"></span>
-                                <span class="caret"></span>
-                              </a>
-                              <ul class="dropdown-menu dropdown-menu-right">
-                                <li><a href="/products/28/edit">Editar</a></li>
-                                <li><a data-confirm="Tem certeza?" rel="nofollow" data-method="delete" href="/products/28">Apagar</a></li>
-                              </ul>
-                            </div>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>125</td>
-                          <td>MOOVE SHOW LIGHT</td>
-                          <td>200</td>
-                          <td>15</td>
-                          <td>
-                            <div class="btn-group">
-                              <a id="drop2" href="#" class="dropdown-toggle btn btn-default" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                                <span class="fa fa-gear fa-lg"></span>
-                                <span class="caret"></span>
-                              </a>
-                              <ul class="dropdown-menu dropdown-menu-right">
-                                <li><a href="/products/28/edit">Editar</a></li>
-                                <li><a data-confirm="Tem certeza?" rel="nofollow" data-method="delete" href="/products/28">Apagar</a></li>
-                              </ul>
-                            </div>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>120</td>
-                          <td>DRINK SHOW LIGHT</td>
-                          <td>150</td>
-                          <td>12</td>
-                          <td>
-                            <div class="btn-group">
-                              <a id="drop2" href="#" class="dropdown-toggle btn btn-default" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                                <span class="fa fa-gear fa-lg"></span>
-                                <span class="caret"></span>
-                              </a>
-                              <ul class="dropdown-menu dropdown-menu-right">
-                                <li><a href="/products/28/edit">Editar</a></li>
-                                <li><a data-confirm="Tem certeza?" rel="nofollow" data-method="delete" href="/products/28">Apagar</a></li>
-                              </ul>
-                            </div>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>125</td>
-                          <td>MOOVE SHOW LIGHT</td>
-                          <td>200</td>
-                          <td>15</td>
-                          <td>
-                            <div class="btn-group">
-                              <a id="drop2" href="#" class="dropdown-toggle btn btn-default" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                                <span class="fa fa-gear fa-lg"></span>
-                                <span class="caret"></span>
-                              </a>
-                              <ul class="dropdown-menu dropdown-menu-right">
-                                <li><a href="/products/28/edit">Editar</a></li>
-                                <li><a data-confirm="Tem certeza?" rel="nofollow" data-method="delete" href="/products/28">Apagar</a></li>
-                              </ul>
-                            </div>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>120</td>
-                          <td>DRINK SHOW LIGHT</td>
-                          <td>150</td>
-                          <td>12</td>
-                          <td>
-                            <div class="btn-group">
-                              <a id="drop2" href="#" class="dropdown-toggle btn btn-default" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                                <span class="fa fa-gear fa-lg"></span>
-                                <span class="caret"></span>
-                              </a>
-                              <ul class="dropdown-menu dropdown-menu-right">
-                                <li><a href="/products/28/edit">Editar</a></li>
-                                <li><a data-confirm="Tem certeza?" rel="nofollow" data-method="delete" href="/products/28">Apagar</a></li>
-                              </ul>
-                            </div>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>125</td>
-                          <td>MOOVE SHOW LIGHT</td>
-                          <td>200</td>
-                          <td>15</td>
-                          <td>
-                            <div class="btn-group">
-                              <a id="drop2" href="#" class="dropdown-toggle btn btn-default" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                                <span class="fa fa-gear fa-lg"></span>
-                                <span class="caret"></span>
-                              </a>
-                              <ul class="dropdown-menu dropdown-menu-right">
-                                <li><a href="/products/28/edit">Editar</a></li>
-                                <li><a data-confirm="Tem certeza?" rel="nofollow" data-method="delete" href="/products/28">Apagar</a></li>
-                              </ul>
-                            </div>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>120</td>
-                          <td>DRINK SHOW LIGHT</td>
-                          <td>150</td>
-                          <td>12</td>
-                          <td>
-                            <div class="btn-group">
-                              <a id="drop2" href="#" class="dropdown-toggle btn btn-default" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                                <span class="fa fa-gear fa-lg"></span>
-                                <span class="caret"></span>
-                              </a>
-                              <ul class="dropdown-menu dropdown-menu-right">
-                                <li><a href="/products/28/edit">Editar</a></li>
-                                <li><a data-confirm="Tem certeza?" rel="nofollow" data-method="delete" href="/products/28">Apagar</a></li>
-                              </ul>
-                            </div>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>125</td>
-                          <td>MOOVE SHOW LIGHT</td>
-                          <td>200</td>
-                          <td>15</td>
-                          <td>
-                            <div class="btn-group">
-                              <a id="drop2" href="#" class="dropdown-toggle btn btn-default" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                                <span class="fa fa-gear fa-lg"></span>
-                                <span class="caret"></span>
-                              </a>
-                              <ul class="dropdown-menu dropdown-menu-right">
-                                <li><a href="/products/28/edit">Editar</a></li>
-                                <li><a data-confirm="Tem certeza?" rel="nofollow" data-method="delete" href="/products/28">Apagar</a></li>
-                              </ul>
-                            </div>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>120</td>
-                          <td>DRINK SHOW LIGHT</td>
-                          <td>150</td>
-                          <td>12</td>
-                          <td>
-                            <div class="btn-group">
-                              <a id="drop2" href="#" class="dropdown-toggle btn btn-default" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                                <span class="fa fa-gear fa-lg"></span>
-                                <span class="caret"></span>
-                              </a>
-                              <ul class="dropdown-menu dropdown-menu-right">
-                                <li><a href="/products/28/edit">Editar</a></li>
-                                <li><a data-confirm="Tem certeza?" rel="nofollow" data-method="delete" href="/products/28">Apagar</a></li>
-                              </ul>
-                            </div>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>125</td>
-                          <td>MOOVE SHOW LIGHT</td>
-                          <td>200</td>
-                          <td>15</td>
-                          <td>
-                            <div class="btn-group">
-                              <a id="drop2" href="#" class="dropdown-toggle btn btn-default" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                                <span class="fa fa-gear fa-lg"></span>
-                                <span class="caret"></span>
-                              </a>
-                              <ul class="dropdown-menu dropdown-menu-right">
-                                <li><a href="/products/28/edit">Editar</a></li>
-                                <li><a data-confirm="Tem certeza?" rel="nofollow" data-method="delete" href="/products/28">Apagar</a></li>
-                              </ul>
-                            </div>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>120</td>
-                          <td>DRINK SHOW LIGHT</td>
-                          <td>150</td>
-                          <td>12</td>
-                          <td>
-                            <div class="btn-group">
-                              <a id="drop2" href="#" class="dropdown-toggle btn btn-default" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                                <span class="fa fa-gear fa-lg"></span>
-                                <span class="caret"></span>
-                              </a>
-                              <ul class="dropdown-menu dropdown-menu-right">
-                                <li><a href="/products/28/edit">Editar</a></li>
-                                <li><a data-confirm="Tem certeza?" rel="nofollow" data-method="delete" href="/products/28">Apagar</a></li>
-                              </ul>
-                            </div>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>125</td>
-                          <td>MOOVE SHOW LIGHT</td>
-                          <td>200</td>
-                          <td>15</td>
-                          <td>
-                            <div class="btn-group">
-                              <a id="drop2" href="#" class="dropdown-toggle btn btn-default" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                                <span class="fa fa-gear fa-lg"></span>
-                                <span class="caret"></span>
-                              </a>
-                              <ul class="dropdown-menu dropdown-menu-right">
-                                <li><a href="/products/28/edit">Editar</a></li>
-                                <li><a data-confirm="Tem certeza?" rel="nofollow" data-method="delete" href="/products/28">Apagar</a></li>
-                              </ul>
-                            </div>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>120</td>
-                          <td>DRINK SHOW LIGHT</td>
-                          <td>150</td>
-                          <td>12</td>
-                          <td>
-                            <div class="btn-group">
-                              <a id="drop2" href="#" class="dropdown-toggle btn btn-default" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                                <span class="fa fa-gear fa-lg"></span>
-                                <span class="caret"></span>
-                              </a>
-                              <ul class="dropdown-menu dropdown-menu-right">
-                                <li><a href="/products/28/edit">Editar</a></li>
-                                <li><a data-confirm="Tem certeza?" rel="nofollow" data-method="delete" href="/products/28">Apagar</a></li>
-                              </ul>
-                            </div>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>125</td>
-                          <td>MOOVE SHOW LIGHT</td>
-                          <td>200</td>
-                          <td>15</td>
-                          <td>
-                            <div class="btn-group">
-                              <a id="drop2" href="#" class="dropdown-toggle btn btn-default" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                                <span class="fa fa-gear fa-lg"></span>
-                                <span class="caret"></span>
-                              </a>
-                              <ul class="dropdown-menu dropdown-menu-right">
-                                <li><a href="/products/28/edit">Editar</a></li>
-                                <li><a data-confirm="Tem certeza?" rel="nofollow" data-method="delete" href="/products/28">Apagar</a></li>
-                              </ul>
-                            </div>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fa fa-sign-out"></i> Sair
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+
+      <div class="wrapper wrapper-content animated fadeInRight">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="ibox float-e-margins">
+              <div class="ibox-title">
+                <h1>Pacotes</h1>
+              </div>
+              <div class="ibox-content">
+                <table class="table table-hover">
+                <thead>
+                  <tr>
+                    <th>Código</th>
+                    <th>Nome</th>
+                    <th>Drinks</th>
+                    <th>Equipe</th>
+                    <th>Ações</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>110</td>
+                    <td>ANIMA SHOW LIGHT</td>
+                    <td>0</td>
+                    <td>22</td>
+                    <td>
+                      <div class="btn-group">
+                        <a id="drop2" href="#" class="dropdown-toggle btn btn-default" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                          <span class="fa fa-gear fa-lg"></span>
+                          <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-right">
+                          <li><a href="/products/28/edit">Editar</a></li>
+                          <li><a data-confirm="Tem certeza?" rel="nofollow" data-method="delete" href="/products/28">Apagar</a></li>
+                        </ul>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>120</td>
+                    <td>DRINK SHOW LIGHT</td>
+                    <td>150</td>
+                    <td>12</td>
+                    <td>
+                      <div class="btn-group">
+                        <a id="drop2" href="#" class="dropdown-toggle btn btn-default" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                          <span class="fa fa-gear fa-lg"></span>
+                          <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-right">
+                          <li><a href="/products/28/edit">Editar</a></li>
+                          <li><a data-confirm="Tem certeza?" rel="nofollow" data-method="delete" href="/products/28">Apagar</a></li>
+                        </ul>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>125</td>
+                    <td>MOOVE SHOW LIGHT</td>
+                    <td>200</td>
+                    <td>15</td>
+                    <td>
+                      <div class="btn-group">
+                        <a id="drop2" href="#" class="dropdown-toggle btn btn-default" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                          <span class="fa fa-gear fa-lg"></span>
+                          <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-right">
+                          <li><a href="/products/28/edit">Editar</a></li>
+                          <li><a data-confirm="Tem certeza?" rel="nofollow" data-method="delete" href="/products/28">Apagar</a></li>
+                        </ul>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>120</td>
+                    <td>DRINK SHOW LIGHT</td>
+                    <td>150</td>
+                    <td>12</td>
+                    <td>
+                      <div class="btn-group">
+                        <a id="drop2" href="#" class="dropdown-toggle btn btn-default" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                          <span class="fa fa-gear fa-lg"></span>
+                          <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-right">
+                          <li><a href="/products/28/edit">Editar</a></li>
+                          <li><a data-confirm="Tem certeza?" rel="nofollow" data-method="delete" href="/products/28">Apagar</a></li>
+                        </ul>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>125</td>
+                    <td>MOOVE SHOW LIGHT</td>
+                    <td>200</td>
+                    <td>15</td>
+                    <td>
+                      <div class="btn-group">
+                        <a id="drop2" href="#" class="dropdown-toggle btn btn-default" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                          <span class="fa fa-gear fa-lg"></span>
+                          <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-right">
+                          <li><a href="/products/28/edit">Editar</a></li>
+                          <li><a data-confirm="Tem certeza?" rel="nofollow" data-method="delete" href="/products/28">Apagar</a></li>
+                        </ul>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>120</td>
+                    <td>DRINK SHOW LIGHT</td>
+                    <td>150</td>
+                    <td>12</td>
+                    <td>
+                      <div class="btn-group">
+                        <a id="drop2" href="#" class="dropdown-toggle btn btn-default" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                          <span class="fa fa-gear fa-lg"></span>
+                          <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-right">
+                          <li><a href="/products/28/edit">Editar</a></li>
+                          <li><a data-confirm="Tem certeza?" rel="nofollow" data-method="delete" href="/products/28">Apagar</a></li>
+                        </ul>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>125</td>
+                    <td>MOOVE SHOW LIGHT</td>
+                    <td>200</td>
+                    <td>15</td>
+                    <td>
+                      <div class="btn-group">
+                        <a id="drop2" href="#" class="dropdown-toggle btn btn-default" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                          <span class="fa fa-gear fa-lg"></span>
+                          <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-right">
+                          <li><a href="/products/28/edit">Editar</a></li>
+                          <li><a data-confirm="Tem certeza?" rel="nofollow" data-method="delete" href="/products/28">Apagar</a></li>
+                        </ul>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>120</td>
+                    <td>DRINK SHOW LIGHT</td>
+                    <td>150</td>
+                    <td>12</td>
+                    <td>
+                      <div class="btn-group">
+                        <a id="drop2" href="#" class="dropdown-toggle btn btn-default" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                          <span class="fa fa-gear fa-lg"></span>
+                          <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-right">
+                          <li><a href="/products/28/edit">Editar</a></li>
+                          <li><a data-confirm="Tem certeza?" rel="nofollow" data-method="delete" href="/products/28">Apagar</a></li>
+                        </ul>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>125</td>
+                    <td>MOOVE SHOW LIGHT</td>
+                    <td>200</td>
+                    <td>15</td>
+                    <td>
+                      <div class="btn-group">
+                        <a id="drop2" href="#" class="dropdown-toggle btn btn-default" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                          <span class="fa fa-gear fa-lg"></span>
+                          <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-right">
+                          <li><a href="/products/28/edit">Editar</a></li>
+                          <li><a data-confirm="Tem certeza?" rel="nofollow" data-method="delete" href="/products/28">Apagar</a></li>
+                        </ul>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>120</td>
+                    <td>DRINK SHOW LIGHT</td>
+                    <td>150</td>
+                    <td>12</td>
+                    <td>
+                      <div class="btn-group">
+                        <a id="drop2" href="#" class="dropdown-toggle btn btn-default" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                          <span class="fa fa-gear fa-lg"></span>
+                          <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-right">
+                          <li><a href="/products/28/edit">Editar</a></li>
+                          <li><a data-confirm="Tem certeza?" rel="nofollow" data-method="delete" href="/products/28">Apagar</a></li>
+                        </ul>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>125</td>
+                    <td>MOOVE SHOW LIGHT</td>
+                    <td>200</td>
+                    <td>15</td>
+                    <td>
+                      <div class="btn-group">
+                        <a id="drop2" href="#" class="dropdown-toggle btn btn-default" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                          <span class="fa fa-gear fa-lg"></span>
+                          <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-right">
+                          <li><a href="/products/28/edit">Editar</a></li>
+                          <li><a data-confirm="Tem certeza?" rel="nofollow" data-method="delete" href="/products/28">Apagar</a></li>
+                        </ul>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>120</td>
+                    <td>DRINK SHOW LIGHT</td>
+                    <td>150</td>
+                    <td>12</td>
+                    <td>
+                      <div class="btn-group">
+                        <a id="drop2" href="#" class="dropdown-toggle btn btn-default" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                          <span class="fa fa-gear fa-lg"></span>
+                          <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-right">
+                          <li><a href="/products/28/edit">Editar</a></li>
+                          <li><a data-confirm="Tem certeza?" rel="nofollow" data-method="delete" href="/products/28">Apagar</a></li>
+                        </ul>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>125</td>
+                    <td>MOOVE SHOW LIGHT</td>
+                    <td>200</td>
+                    <td>15</td>
+                    <td>
+                      <div class="btn-group">
+                        <a id="drop2" href="#" class="dropdown-toggle btn btn-default" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                          <span class="fa fa-gear fa-lg"></span>
+                          <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-right">
+                          <li><a href="/products/28/edit">Editar</a></li>
+                          <li><a data-confirm="Tem certeza?" rel="nofollow" data-method="delete" href="/products/28">Apagar</a></li>
+                        </ul>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>120</td>
+                    <td>DRINK SHOW LIGHT</td>
+                    <td>150</td>
+                    <td>12</td>
+                    <td>
+                      <div class="btn-group">
+                        <a id="drop2" href="#" class="dropdown-toggle btn btn-default" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                          <span class="fa fa-gear fa-lg"></span>
+                          <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-right">
+                          <li><a href="/products/28/edit">Editar</a></li>
+                          <li><a data-confirm="Tem certeza?" rel="nofollow" data-method="delete" href="/products/28">Apagar</a></li>
+                        </ul>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>125</td>
+                    <td>MOOVE SHOW LIGHT</td>
+                    <td>200</td>
+                    <td>15</td>
+                    <td>
+                      <div class="btn-group">
+                        <a id="drop2" href="#" class="dropdown-toggle btn btn-default" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                          <span class="fa fa-gear fa-lg"></span>
+                          <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-right">
+                          <li><a href="/products/28/edit">Editar</a></li>
+                          <li><a data-confirm="Tem certeza?" rel="nofollow" data-method="delete" href="/products/28">Apagar</a></li>
+                        </ul>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
               </div>
             </div>
           </div>
         </div>
-
+      </div>
         <div class="footer">
           <div class="pull-right">
             Copyright <strong>Moove Produções</strong> &copy; 2015
           </div>
         </div>
+
       </div>
     </div>
 
     <script src="js/jquery-2.1.1.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
     <script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+    <script src="js/inspinia.js"></script>
+    <!--<script src="js/plugins/pace/pace.min.js"></script>-->
 
   </body>
 </html>

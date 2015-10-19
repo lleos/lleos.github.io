@@ -1,45 +1,22 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&lang=en");
 @import url("https://fonts.googleapis.com/css?family=Roboto:400,300,500,700");
-/*
- *
- *   INSPINIA - Responsive Admin Theme
- *   version 2.3
- *
-*/
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-weight: 100;
-}
-h1 {
-  font-size: 30px;
-}
-h2 {
-  font-size: 24px;
-}
-h3 {
-  font-size: 16px;
-}
-h4 {
-  font-size: 14px;
-}
-h5 {
-  font-size: 12px;
-}
-h6 {
-  font-size: 10px;
-}
-h3,
-h4,
-h5 {
+
+h1,h2,h3,h4,h5,h6 {font-weight: 100;}
+
+h1 {font-size: 30px;}
+h2 {font-size: 24px;}
+h3 {font-size: 16px;}
+h4 {font-size: 14px;}
+h5 {font-size: 12px;}
+h6 {font-size: 10px;}
+
+h3,h4,h5 {
   margin-top: 5px;
   font-weight: 600;
 }
+
 .nav > li > a {
-  color: #a7b1c2;
+  color: #0eff00;
   font-weight: 600;
   padding: 14px 20px 14px 25px;
 }
@@ -47,11 +24,11 @@ h5 {
   color: #999c9e;
 }
 .nav > li.active > a {
-  color: #ffffff;
+  color: #fff;
 }
 .navbar-default .nav > li > a:hover,
 .navbar-default .nav > li > a:focus {
-  background-color: #293846;
+  background-color: #101010;
   color: white;
 }
 .nav .open > a,
@@ -160,15 +137,15 @@ h5 {
   font-size: 12px;
 }
 .nav-header {
-  padding: 33px 25px;
-  background: url("patterns/header-profile.png") no-repeat;
+  padding: 15px 25px;
+  /*background: url("patterns/header-profile.png") no-repeat;*/
 }
 .pace-done .nav-header {
   transition: all 0.5s;
 }
 .nav > li.active {
-  border-left: 4px solid #19aa8d;
-  background: #293846;
+  border-left: 4px solid #0eff00;
+  background: #101010;
 }
 .nav.nav-second-level > li.active {
   border: none;
@@ -213,7 +190,7 @@ h5 {
   line-height: 12px;
   padding: 2px 5px;
   position: absolute;
-  right: 15px;
+  right: 7px;
   top: 12px;
 }
 .arrow {
@@ -301,6 +278,7 @@ body.mini-navbar .navbar-default .nav > li > .nav-second-level li a {
   color: white;
   display: none;
   padding: 18px 0;
+  background-color: #000;
 }
 .pace-done .navbar-static-side,
 .pace-done .nav-header,
@@ -363,7 +341,7 @@ body.canvas-menu .logo-element {
 }
 body.mini-navbar .nav-header {
   padding: 0;
-  background-color: #1ab394;
+  background-color: #000;
 }
 body.canvas-menu .nav-header {
   padding: 33px 25px;
@@ -604,9 +582,9 @@ body.canvas-menu.mini-navbar nav.navbar-static-side {
   color: #fff;
 }
 .btn-primary {
-  background-color: #1ab394;
-  border-color: #1ab394;
-  color: #FFFFFF;
+  background-color: #000;
+  border-color: #000;
+  color: #0eff00;
 }
 .btn-primary:hover,
 .btn-primary:focus,
@@ -617,8 +595,8 @@ body.canvas-menu.mini-navbar nav.navbar-static-side {
 .btn-primary:active:hover,
 .btn-primary.active:hover,
 .btn-primary.active:focus {
-  background-color: #18a689;
-  border-color: #18a689;
+  background-color: #000;
+  border-color: #000;
   color: #FFFFFF;
 }
 .btn-primary:active,
@@ -3233,7 +3211,7 @@ a.forum-item-title:hover {
 }
 body {
   font-family: "open sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  background-color: #2f4050;
+  background-color: #000;
   font-size: 14px;
   color: #676a6c;
   overflow-x: hidden;
