@@ -27,9 +27,9 @@
                 <img alt="image" class="img-circle" src="img/logo.png" />
               </div>
             </li>
-            <li class="active">
+            <li>
               <a href="#"><i class="fa fa-th-large"></i> <span class="nav-label">Eventos</span> <span class="fa arrow"></span></a>
-              <ul class="nav nav-second-level collapse in">
+              <ul class="nav nav-second-level collapse">
                   <li><a href="#">Janeiro</a></li>
                   <li><a href="#">Feveiro</a></li>
                   <li><a href="#">Março</a></li>
@@ -42,6 +42,7 @@
                   <li><a href="#">Outubro</a></li>
                   <li><a href="#">Novembro</a></li>
                   <li><a href="#">Dezembro</a></li>
+                  <li><a href="#">2014</a></li>
               </ul>
             </li>
             <li>
@@ -49,18 +50,6 @@
                 <i class="fa fa-file"></i>
                 <span class="nav-label">Contratos</span>
               </a>
-            </li>
-            <li>
-              <a href="#">
-                <i class="fa fa-cubes"></i>
-                <span class="nav-label">Pacotes</span>
-              </a>
-            </li>
-            <li>
-            <a href="#">
-              <i class="fa fa-cart-plus"></i>
-              <span class="nav-label">Itens adicionais</span>
-            </a>
             </li>
             <li>
             <a href="#">
@@ -87,6 +76,18 @@
             </a>
           </div>
           <ul class="nav navbar-top-links navbar-right">
+            <li class="active">
+              <a href="#">
+                <i class="fa fa-cubes"></i>
+                <span class="nav-label">Pacotes</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fa fa-cart-plus"></i>
+                <span class="nav-label">Itens adicionais</span>
+              </a>
+            </li>
             <li class="dropdown">
               <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
                 <i class="fa fa-bell"></i>
@@ -127,6 +128,7 @@
             <div class="ibox float-e-margins">
               <div class="ibox-title">
                 <h1>Pacotes</h1>
+                <a class="btn btn-primary btn-sm pull-right" href="#">Novo</a>
               </div>
               <div class="ibox-content">
                 <table class="table table-hover">
@@ -152,8 +154,8 @@
                           <span class="caret"></span>
                         </a>
                         <ul class="dropdown-menu dropdown-menu-right">
-                          <li><a href="/products/28/edit">Editar</a></li>
-                          <li><a data-confirm="Tem certeza?" rel="nofollow" data-method="delete" href="/products/28">Apagar</a></li>
+                          <li><a data-toggle="modal" href="remote.html" data-target="#myModal">Editar</a></li>
+                          <li><a data-confirm="Tem certeza?" rel="nofollow" data-method="delete" href="#">Apagar</a></li>
                         </ul>
                       </div>
                     </td>
@@ -423,6 +425,143 @@
           </div>
         </div>
 
+      </div>
+    </div>
+
+    <div class="modal inmodal in" id="myModal" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content animated fadeIn">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+            <i class="fa fa-cubes modal-icon"></i>
+            <h4 class="modal-title">Editar Pacote</h4>
+          </div>
+          <div class="modal-body">
+            <h3>Dados do produto</h3>
+            <div class="row">
+              <div class="col-xs-6">
+                <div class="form-group">
+                  <label class="control-label" for="product_Nome do Produto">Nome do produto</label><br>
+                  <input class="form-control" type="text" value="ANIMA SHOW LIGHT" name="product[name]" id="product_name">
+                </div>
+              </div>
+              <div class="col-xs-3">
+                <div class="form-group">
+                  <label class="control-label" for="product_Quantidade de Drinks">Quantidade de drinks</label><br>
+                  <input class="form-control" type="number" value="0" name="product[drinks]" id="product_drinks">
+                </div>
+              </div>
+              <div class="col-xs-3">
+                <div class="form-group">
+                  <label class="control-label" for="product_Membros da Equipe">Membros da equipe</label><br>
+                  <input class="form-control" type="number" value="2" name="product[staff]" id="product_staff">
+                </div>
+              </div>
+            </div>
+            <h3>Itens do pacote</h3>
+            <fieldset id="package-items">
+              <ol>
+                <li class="control-group nested-fields">
+                  <div class="row">
+                    <div class="col-xs-1">
+                      <div class="form-group">
+                        <label class="control-label" for="product_package_items_attributes_0_Remover">Remover</label>
+                        <input type="hidden" name="product[package_items_attributes][0][_destroy]" id="product_package_items_attributes_0__destroy" value="false"><a class="btn btn-danger form-control remove_fields dynamic" href="#">×</a>
+                      </div>
+                    </div>
+                    <div class="col-xs-4">
+                      <div class="form-group">
+                        <label class="control-label" for="product_package_items_attributes_0_additional_item">Item adicional</label>
+                        <select class="form-control" name="product[package_items_attributes][0][additional_item_id]" id="product_package_items_attributes_0_additional_item_id">
+                          <option value="35">TAXA DESLOCAMENTO</option>
+                          <option value="36">TAXA HOSPEDAGEM</option>
+                          <option value="37">DRINKS EXTRAS</option>
+                          <option value="38">50 UN</option>
+                          <option value="39">RECEPÇÃO COM DRINKS</option>
+                          <option value="40">MAGIC CIRCUS</option>
+                          <option value="41">PALETAS MEXICANAS</option>
+                          <option value="42">BASTÕES DE LED</option>
+                          <option value="43">RESERVA PROFISSIONAL</option>
+                          <option value="44">PROFISSIONAL EXTRA</option>
+                          <option value="45">TEQUILEIROS (CASAL)</option>
+                          <option value="46">COPÃO PERSONALIZADO</option>
+                          <option value="47">TUBOS DE ENSAIO</option>
+                          <option value="48">OUTROS ITENS</option>
+                          <option value="49">RECEPÇÃO COM CLERICOT</option>
+                          <option value="50">BAR PERSONALIZADO</option>
+                          <option value="51">TAXA DESLOCAMENTO</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-xs-2">
+                      <div class="form-group">
+                        <label class="control-label" for="product_package_items_attributes_0_quantity">Quantidade</label>
+                        <input class="form-control" type="number" name="product[package_items_attributes][0][quantity]" id="product_package_items_attributes_0_quantity">
+                      </div>
+                    </div>
+                    <div class="col-xs-1">
+                      <div class="form-group">
+                        <label class="control-label" for="product_package_items_attributes_0_custom">Personalizado</label>
+                        <input name="product[package_items_attributes][0][custom]" type="hidden" value="0"><input class="form-control" type="checkbox" value="1" name="product[package_items_attributes][0][custom]" id="product_package_items_attributes_0_custom">
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="control-group nested-fields">
+                  <div class="row">
+                    <div class="col-xs-1">
+                      <div class="form-group">
+                        <label class="control-label" for="product_package_items_attributes_0_Remover">Remover</label>
+                        <input type="hidden" name="product[package_items_attributes][0][_destroy]" id="product_package_items_attributes_0__destroy" value="false"><a class="btn btn-danger form-control remove_fields dynamic" href="#">×</a>
+                      </div>
+                    </div>
+                    <div class="col-xs-4">
+                      <div class="form-group">
+                        <label class="control-label" for="product_package_items_attributes_0_additional_item">Item adicional</label>
+                        <select class="form-control" name="product[package_items_attributes][0][additional_item_id]" id="product_package_items_attributes_0_additional_item_id">
+                          <option value="35">TAXA DESLOCAMENTO</option>
+                          <option value="36">TAXA HOSPEDAGEM</option>
+                          <option value="37">DRINKS EXTRAS</option>
+                          <option value="38">50 UN</option>
+                          <option value="39">RECEPÇÃO COM DRINKS</option>
+                          <option value="40">MAGIC CIRCUS</option>
+                          <option value="41">PALETAS MEXICANAS</option>
+                          <option value="42">BASTÕES DE LED</option>
+                          <option value="43">RESERVA PROFISSIONAL</option>
+                          <option value="44">PROFISSIONAL EXTRA</option>
+                          <option value="45">TEQUILEIROS (CASAL)</option>
+                          <option value="46">COPÃO PERSONALIZADO</option>
+                          <option value="47">TUBOS DE ENSAIO</option>
+                          <option value="48">OUTROS ITENS</option>
+                          <option value="49">RECEPÇÃO COM CLERICOT</option>
+                          <option value="50">BAR PERSONALIZADO</option>
+                          <option value="51">TAXA DESLOCAMENTO</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-xs-2">
+                      <div class="form-group">
+                        <label class="control-label" for="product_package_items_attributes_0_quantity">Quantidade</label>
+                        <input class="form-control" type="number" name="product[package_items_attributes][0][quantity]" id="product_package_items_attributes_0_quantity">
+                      </div>
+                    </div>
+                    <div class="col-xs-1">
+                      <div class="form-group">
+                        <label class="control-label" for="product_package_items_attributes_0_custom">Personalizado</label>
+                        <input name="product[package_items_attributes][0][custom]" type="hidden" value="0"><input class="form-control" type="checkbox" value="1" name="product[package_items_attributes][0][custom]" id="product_package_items_attributes_0_custom">
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ol>
+              <a class="btn btn-primary btn-sm text-right" href="#">Adicionar item</a>
+            </fieldset>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-white" data-dismiss="modal">Cancelar</button>
+            <button type="button" class="btn btn-primary">Salvar</button>
+          </div>
+        </div>
       </div>
     </div>
 

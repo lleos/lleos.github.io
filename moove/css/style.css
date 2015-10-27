@@ -23,8 +23,10 @@ h3,h4,h5 {
 .nav.navbar-right > li > a {
   color: #999c9e;
 }
-.nav > li.active > a {
-  color: #fff;
+.nav.navbar-right > li.active > a,
+.nav.navbar-right > li > a:focus,
+.nav.navbar-right > li > a:hover {
+  color: #0eff00;
 }
 .navbar-default .nav > li > a:hover,
 .navbar-default .nav > li > a:focus {
@@ -144,8 +146,9 @@ h3,h4,h5 {
   transition: all 0.5s;
 }
 .nav > li.active {
-  border-left: 4px solid #0eff00;
-  background: #101010;
+  color: #0eff00;
+  /*border-left: 4px solid #0eff00;
+  background: #101010;*/
 }
 .nav.nav-second-level > li.active {
   border: none;
@@ -1801,7 +1804,7 @@ a.DTTT_button:hover:not(.DTTT_disabled) {
 }
 .form-control:focus,
 .single-line:focus {
-  border-color: #1ab394 !important;
+  border-color: #0eff00 !important;
 }
 .has-success .form-control {
   border-color: #1ab394;
@@ -3319,12 +3322,22 @@ video {
 .modal-body {
   padding: 20px 30px 30px 30px;
 }
+.modal-body  h3 {
+  padding-bottom: 8px;
+  margin: 20px 0;
+  border-bottom: 1px solid #e5e5e5
+}
+.modal-body  h3:first-child {
+  margin-top: 0;
+}
+.modal-body label {
+  font-weight: 600;
+}
 .inmodal .modal-body {
   background: #f8fafb;
 }
 .inmodal .modal-header {
-  padding: 30px 15px;
-  text-align: center;
+  padding: 15px;
 }
 .animated.modal.fade .modal-dialog {
   -webkit-transform: none;
@@ -3333,10 +3346,12 @@ video {
   transform: none;
 }
 .inmodal .modal-title {
+  display: inline-block;
   font-size: 26px;
+  font-weight: 400;
 }
 .inmodal .modal-icon {
-  font-size: 84px;
+  font-size: 26px;
   color: #e2e3e3;
 }
 .modal-footer {
