@@ -23,10 +23,13 @@ h3,h4,h5 {
 .nav.navbar-right > li > a {
   color: #999c9e;
 }
+.nav.navbar-right > li.active,
 .nav.navbar-right > li.active > a,
 .nav.navbar-right > li > a:focus,
 .nav.navbar-right > li > a:hover {
   color: #0eff00;
+  border-left: none;
+  background: none ;
 }
 .navbar-default .nav > li > a:hover,
 .navbar-default .nav > li > a:focus {
@@ -147,8 +150,8 @@ h3,h4,h5 {
 }
 .nav > li.active {
   color: #0eff00;
-  /*border-left: 4px solid #0eff00;
-  background: #101010;*/
+  border-left: 1px solid #0eff00;
+  background: #101010;
 }
 .nav.nav-second-level > li.active {
   border: none;
