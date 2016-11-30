@@ -2541,10 +2541,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 .navbar-brand {
   float: left;
-  padding: 23.5px 15px;
-  font-size: 24px;
-  line-height: 1;
-  height: 70px;
+  padding: 15px;
 }
 .navbar-brand:hover,
 .navbar-brand:focus {
@@ -2802,7 +2799,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   background-color: transparent;
 }
 .navbar-default .navbar-toggle .icon-bar {
-  background-color: #6c5b7b;
+  background-color: #ffffff;
 }
 .navbar-default .navbar-collapse,
 .navbar-default .navbar-form {
@@ -5317,8 +5314,9 @@ body {
 }
 .features-item__icon {
   float: left;
-  margin-right: 30px;
-  font-size: 26px;
+  display: block;
+  margin-right: 20px;
+  font-size: 40px;
 }
 .features-item__body {
   overflow: hidden;
@@ -5561,7 +5559,7 @@ span.left {
   border-radius: 6px;
 }
 .sign-up__form_new {
-  width: 100%;
+  max-width: 90%;
   padding: 20px 20px 40px;
   margin: 0 auto 20px;
   border-radius: 6px;
@@ -5575,4 +5573,19 @@ span.left {
 .login-register-switch-link {
   margin-left: 5px;
   text-align: right;
+}
+
+.lrg-logo {
+  width: 150px;
+  height: 33px;
+  text-align: center;
+  background: url(../img/mettzer_logo.png) 0 0 transparent no-repeat;
+}
+
+.sml-logo {
+  width: 150px;
+  height: 33px;
+  text-align: center;
+  background: url(../img/mettzer_logo_preto.png) 0 0 transparent no-repeat;
+
 }
