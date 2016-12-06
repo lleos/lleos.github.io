@@ -5464,6 +5464,7 @@ body {
 .features-item__icon span {
   min-width: 55px;
   min-height: 40px;
+  text-align: center;
 }
 .features-item__body {
   overflow: hidden;
