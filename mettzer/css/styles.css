@@ -5461,6 +5461,10 @@ body {
   margin-right: 20px;
   font-size: 40px;
 }
+.features-item__icon span {
+  min-width: 55px;
+  min-height: 40px;
+}
 .features-item__body {
   overflow: hidden;
 }
