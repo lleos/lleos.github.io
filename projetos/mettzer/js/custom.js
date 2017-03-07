@@ -45,6 +45,7 @@ $(function() {
   });
 });
 
+/*** change logo on scroll*/
 $(function() { var logo = $(".lrg-logo"); $(window).scroll(function() {
 var scroll = $(window).scrollTop();
     if (scroll >= 90) {
