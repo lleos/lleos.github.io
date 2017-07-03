@@ -87,17 +87,132 @@
 
           <div class="actions-wrapper actions-wrapper-right actions-wrapper-sm">
             <a class="btn btn-link btn-sm subheader-btn" href="../index.html">Cancelar</a>
-            <p class="btn-height-sm text-muted small builder-text">Carregue o arquivo para avançar</p>
-            <a class="hide btn btn-primary btn-sm subheader-btn go-forward" href="../configure.html">Salvar e avançar</a>
+
+            <p class="hide text-muted small builder-text">Carregue o arquivo para avançar</p>
+            <p class="hide text-muted small builder-text">Aceite o termo para avançar</p>
+
+            <a class="btn btn-primary btn-sm subheader-btn go-forward" href="../builder/configure.html">Salvar e avançar</a>
           </div>
         </div>
       </nav>
 
       <div class="container main-content">
-        <h4>Arraste o arquivo ou clik no link para carrega-lo</h4>
+        <h4>Arraste ou selecione o arquivo para carrega-lo</h4>
         <hr class="spacer-md">
         <hr class="invisible spacer-md">
 
+        <div class="drop-file">
+          <div id="file_upload">
+            <form id="s3-uploader" data-remote="true" data-max-file-size="20971520" data-callback-url="null" data-callback-method="POST" data-callback-param="file" enctype="multipart/form-data" action="https://rdstation-static.s3.amazonaws.com/" accept-charset="UTF-8" method="post">
+              <input name="utf8" type="hidden" value="✓">
+              <input type="hidden" name="key" id="key" value="cms/files/8770/1498932253/${unique_id}">
+              <input type="hidden" name="acl" id="acl" value="public-read">
+              <input type="hidden" name="AWSAccessKeyId" id="AWSAccessKeyId" value="AKIAIZDHI5X4VVFVU4JA">
+              <input type="hidden" name="policy" id="policy" value="eyJleHBpcmF0aW9uIjoiMjAxNy0wNy0wMlQwNDowNDoxM1oiLCJjb25kaXRpb25zIjpbWyJzdGFydHMtd2l0aCIsIiR1dGY4IiwiIl0sWyJzdGFydHMtd2l0aCIsIiRrZXkiLCJjbXMvIl0sWyJzdGFydHMtd2l0aCIsIiR4LXJlcXVlc3RlZC13aXRoIiwiIl0sWyJjb250ZW50LWxlbmd0aC1yYW5nZSIsMCw1MjQyODgwMDBdLFsic3RhcnRzLXdpdGgiLCIkY29udGVudC10eXBlIiwiIl0seyJidWNrZXQiOiJyZHN0YXRpb24tc3RhdGljIn0seyJhY2wiOiJwdWJsaWMtcmVhZCJ9LHsic3VjY2Vzc19hY3Rpb25fc3RhdHVzIjoiMjAxIn1dfQ==">
+              <input type="hidden" name="signature" id="signature" value="/+kRzWwL/Bwgzqsby8tqTmz3lu4=">
+              <input type="hidden" name="success_action_status" id="success_action_status" value="201">
+              <input type="hidden" name="X-Requested-With" id="X-Requested-With" value="xhr">
+              <input type="file" name="file" id="file">
+              <div id="preview-box">
+                <img id="launch" class="img-responsive center-block" src="../assets/images/upload-file.png">
+                <img id="uploaded-image-preview">
+                <small style="font-size: 12px;">Tamanho máximo: 25MB</small>
+              </div>
+              <p>
+                <small>
+                  Arraste um arquivo <strong>CSV</strong> e o solte aqui para carregar ou <br>
+                  <a id="js-select-file" class="btn-link trigger-upload">Selecione um arquivo</a>
+                </small>
+              </p>
+            </form>
+            <script id="template-upload" type="text/x-tmpl">
+              <div id="file-{%=o.unique_id%}" class="upload">
+                <div class="progress">
+                  <div class="progress-bar bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%;"></div>
+                </div>
+              </div>
+            </script>
+          </div>
+        </div>
+
+        <div class="hide drop-file drop-file-check">
+          <div id="file_upload">
+            <form id="s3-uploader" data-remote="true" data-max-file-size="20971520" data-callback-url="null" data-callback-method="POST" data-callback-param="file" enctype="multipart/form-data" action="https://rdstation-static.s3.amazonaws.com/" accept-charset="UTF-8" method="post">
+              <input name="utf8" type="hidden" value="✓">
+              <input type="hidden" name="key" id="key" value="cms/files/8770/1498932253/${unique_id}">
+              <input type="hidden" name="acl" id="acl" value="public-read">
+              <input type="hidden" name="AWSAccessKeyId" id="AWSAccessKeyId" value="AKIAIZDHI5X4VVFVU4JA">
+              <input type="hidden" name="policy" id="policy" value="eyJleHBpcmF0aW9uIjoiMjAxNy0wNy0wMlQwNDowNDoxM1oiLCJjb25kaXRpb25zIjpbWyJzdGFydHMtd2l0aCIsIiR1dGY4IiwiIl0sWyJzdGFydHMtd2l0aCIsIiRrZXkiLCJjbXMvIl0sWyJzdGFydHMtd2l0aCIsIiR4LXJlcXVlc3RlZC13aXRoIiwiIl0sWyJjb250ZW50LWxlbmd0aC1yYW5nZSIsMCw1MjQyODgwMDBdLFsic3RhcnRzLXdpdGgiLCIkY29udGVudC10eXBlIiwiIl0seyJidWNrZXQiOiJyZHN0YXRpb24tc3RhdGljIn0seyJhY2wiOiJwdWJsaWMtcmVhZCJ9LHsic3VjY2Vzc19hY3Rpb25fc3RhdHVzIjoiMjAxIn1dfQ==">
+              <input type="hidden" name="signature" id="signature" value="/+kRzWwL/Bwgzqsby8tqTmz3lu4=">
+              <input type="hidden" name="success_action_status" id="success_action_status" value="201">
+              <input type="hidden" name="X-Requested-With" id="X-Requested-With" value="xhr">
+              <input type="file" name="file" id="file">
+              <div id="preview-box">
+                <div class="icon-container">
+                  <i class="status-icon status-icon-success" id="status-icon-name"></i>
+                </div>
+                <p>
+                  <small>
+                    <strong>Nome-do-arquivo.csv</strong><br>
+                    Este arquivo contém <strong>10.000</strong> Leads <br>
+                    <a id="js-select-file" class="btn-link trigger-upload">Alterar arquivo</a>
+                  </small>
+                </p>
+              </div>
+            </form>
+            <script id="template-upload" type="text/x-tmpl">
+              <div id="file-{%=o.unique_id%}" class="upload">
+                <div class="progress">
+                  <div class="progress-bar bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%;"></div>
+                </div>
+              </div>
+            </script>
+          </div>
+        </div>
+
+        <div class="form-group hide">
+          <div class="checkbox">
+            <label>
+              <input type="checkbox">
+              Eu entendo que meu plano de cobrança pode ser alterado automaticamente. <br>
+              <smal class="checkbox-info-xs">
+                Estou ciente que, após a importação, caso a quantidade total de Leads da minha base seja superior ao plano <br>
+                contratado, haverá um reajuste automático do valor do meu plano conforme a <a href="" class="btn-link">tabela de valores do RD Station</a>.
+              </small>
+            </label>
+          </div>
+        </div>
+
+        <div class="message" style="margin-top: 20px;">
+          <div class="row">
+          <div class="col-xs-1">
+            <img src="../assets/images/idea.png" alt="">
+          </div>
+          <div class="col-xs-11">
+            <h4>O que você deve saber sobre a importação de Leads</h4>
+            <hr class="spacer-sm invisible">
+            <ol>
+              <li>
+                <p>
+                  O RD Station aceita apenas arquivos em formato <strong>CSV</strong> que estejam codificados em <strong>UTF-8</strong>, antes de iniciar uma importação
+                  certifique-se de que seu arquivo esteja configurado corretamente. <a href="http://ajuda.rdstation.com.br/hc/pt-br/articles/202653519-Por-que-verificar-minha-lista-antes-de-importar-" class="btn-link" target="_blank">O que devo verificar antes de importar?</a>
+                </p>
+              </li>
+              <li>
+                <p>
+                  Certifique-se de incluir uma linha de título (cabeçalho) em cada arquivo CSV. <a href="http://ajuda.rdstation.com.br/hc/pt-br/articles/201747314" class="btn-link" target="_blank">Saiba como fazer um CSV</a> ou <a href="https://s3-sa-east-1.amazonaws.com/rdstation-static/files/template-importar-leads.csv" class="btn-link">Baixe um exemplo</a>.
+                </p>
+              </li>
+              <li>
+                <p>
+                  Leads com o mesmo endereço de email serão mesclados caso já existam em sua base, ou seja, o email não será duplicado e atualizaremos as informações fornecidades com a base
+                  em sua última importação.
+                </p>
+              </li>
+            </ol>
+          </div>
+        </div>
+        </div>
       </div>
     </section>
   </body>

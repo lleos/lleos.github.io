@@ -14492,7 +14492,7 @@ p.alert.alert-info.merge {
     padding-left: 5em;
     color: #f2f2f2
 }
-.drop-file {
+/*.drop-file {
     padding: 10px;
     background-color: white;
     text-align: center;
@@ -14501,7 +14501,7 @@ p.alert.alert-info.merge {
 }
 .drop-file:hover {
     border: 4px dashed lightblue
-}
+}*/
 .drop-file input[type=file] {
     position: absolute;
     top: 0;
