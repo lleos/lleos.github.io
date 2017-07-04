@@ -50,6 +50,13 @@
         </div>
         <div class="header-navbar-breadcrumb">
           <a class="header-navbar-link" href="../index.html">Base de Leads</a>
+          <a class="header-navbar-link" data-toggle="modal" data-target="#email_settings" href="#email_settings">
+            <span class="email-name">
+              <span id="email_settings_name">
+                Nome-do-arquivo
+              </span>
+            </span>
+          </a>
         </div>
         <div class="header-navbar-actions header-navbar-actions-right">
           <a class="header-navbar-link" href="../index.html">Sair do modo de edição</a>
@@ -60,7 +67,7 @@
       <nav class="subheader">
         <div class="subheader-container">
           <div class="actions-wrapper actions-wrapper-sm">
-            <a class="btn btn-default btn-sm subheader-btn go-rewind" href="../builder/choose.html">Voltar</a>
+            <a class="btn btn-default btn-sm subheader-btn go-rewind" href="../builder/review.html">Voltar</a>
           </div>
           <div class="steps-wrapper steps-wrapper-sm">
             <ul class="steps" data-step="recipients">
@@ -69,41 +76,55 @@
                   <a class="nav-link" href="../builder/choose.html">Escolher</a>
                 </span>
               </li>
-              <li class="active">
+              <li class="">
                 <span>
                   <a class="nav-link" href="../builder/review.html">Revisar</a>
                 </span>
               </li>
-              <li><span>Carregar</span></li>
-              <li><span>Configurar</span></li>
-              <li><span>Combinar</span></li>
-              <li><span>Confirmar</span></li>
+              <li class="">
+                <span>
+                  <a class="nav-link" href="../builder/upload-file.html">Carregar</a>
+                </span>
+              </li>
+              <li class="">
+                <span>
+                  <a class="nav-link" href="../builder/configure.html">Configurar</a>
+                </span>
+              </li>
+              <li class="">
+                <span>
+                  <a class="nav-link" href="../builder/combine-fields.html">Combinar</a>
+                </span>
+              </li>
+              <li class="active">
+                <span>
+                  <a class="nav-link" href="../builder/confirm.html">Confirmar</a>
+                </span>
+              </li>
             </ul>
           </div>
 
           <div class="actions-wrapper actions-wrapper-right actions-wrapper-sm">
             <a class="btn btn-link btn-sm subheader-btn" href="../index.html">Cancelar</a>
-            <p class="hide btn-height-sm text-muted small builder-text">Complete a revisão para avançar</p>
-            <a class="btn btn-primary btn-sm subheader-btn go-forward" href="../builder/upload-file.html">Salvar e avançar</a>
+
+            <p class="hide text-muted small builder-text">Carregue o arquivo para avançar</p>
+            <p class="hide text-muted small builder-text">Aceite o termo para avançar</p>
+
+            <a class="btn btn-link btn-sm subheader-btn" href="../imports.html">Salvar e sair</a>
+            <a class="btn btn-primary btn-sm subheader-btn go-forward" href="../imports.html">Finalizar</a>
           </div>
         </div>
       </nav>
 
       <div class="container main-content">
-        <h4>Revise o arquivo antes de importa-lo</h4>
+        <h4>Confirmação de adesão (opt-in)</h4>
         <hr class="spacer-md">
         <hr class="invisible spacer-md">
-        <h4 >Revise o formato do arquivo</h4>
-        <hr class="invisible spacer-xs">
         <div class="form-group">
           <div class="checkbox">
             <label>
               <input type="checkbox">
-              O arquivo está em formato .CSV? <span data-toggle="tooltip" data-placement="right" data-original-title="Opção disponível apenas para fluxos que não possuem segmentações na condição de entrada."><i class="xicon-exclamation-circle"></i></span> <br>
-              <smal class="checkbox-info-xs">
-                Usando o Excel? Salve a sua tabela no formato CSV usando "Salvar como", <br>
-                em seguida vá em "Tipo" e selecione a opção "CSV (Separado por vírgulas)".
-              </small>
+              Confirmo que este arquivo está <strong>de acordo</strong> com as <a href="" class="btn-link" target="_blank">políticas e termos de uso do RD Station</a>.
             </label>
           </div>
         </div>
@@ -111,29 +132,7 @@
           <div class="checkbox">
             <label>
               <input type="checkbox">
-              O arquivo está codificado como Unicode (UTF-8)? <span data-toggle="tooltip" data-placement="right" data-original-title="Opção disponível apenas para fluxos que não possuem segmentações na condição de entrada."><i class="xicon-exclamation-circle"></i></span> <br>
-              <smal class="checkbox-info-xs">
-                Usando o Excel? Vá em "ferramentas" e escolha "Opções de web" e acesse a aba <br>
-                "Codificação" e em "Salvar este documento" selecione a opção "Unicode (UFT-8)".
-              </small>
-            </label>
-            <br>
-            <br>
-          </div>
-        </div>
-
-        <h4 >Revise o conteúdo do arquivo</h4>
-        <hr class="invisible spacer-xs">
-
-        <div class="form-group">
-          <div class="checkbox">
-            <label>
-              <input type="checkbox">
-              As colunas possuem cabeçalho? <span data-toggle="tooltip" data-placement="right" data-original-title="Opção disponível apenas para fluxos que não possuem segmentações na condição de entrada."><i class="xicon-exclamation-circle"></i></span> <br>
-              <smal class="checkbox-info-xs">
-                O RD Station usa os cabeçalhos da primeira linha para corresponder as colunas com  <br>
-                os campos combinados. Certifique-se de que todas as colunas possuem cabeçalho.
-              </small>
+              Confirmo que esta lista <strong>não foi comprada</strong> ou <strong>obtida de forma ilícita</strong>.
             </label>
           </div>
         </div>
@@ -141,37 +140,8 @@
           <div class="checkbox">
             <label>
               <input type="checkbox">
-              Existe apenas uma coluna chamada "email" no arquivo? <span data-toggle="tooltip" data-placement="right" data-original-title="Opção disponível apenas para fluxos que não possuem segmentações na condição de entrada."><i class="xicon-exclamation-circle"></i></span> <br>
-              <smal class="checkbox-info-xs">
-                O Lead é gerado no RD Station através do email. Caso o arquivo possua mais de uma <br>
-                coluna com o dado de email, ou não possua dado na coluna, o Lead não será convertido.
-              </small>
+              Confirmo que os contatos que estão sendo importados <strong>autorizam o recebimento de emails da minha empresa</strong>.
             </label>
-          </div>
-        </div>
-        <div class="form-group">
-          <div class="checkbox">
-            <label>
-              <input type="checkbox">
-              Existem espaços em branco no arquivo? <span data-toggle="tooltip" data-placement="right" data-original-title="Opção disponível apenas para fluxos que não possuem segmentações na condição de entrada."><i class="xicon-exclamation-circle"></i></span> <br>
-              <smal class="checkbox-info-xs">
-                Espaços em branco antes ou depois de informações contidas nas células e linhas duplicadas <br>
-                podem interferir na aprovação de seu arquivo.
-              </small>
-            </label>
-          </div>
-        </div>
-        <div class="form-group">
-          <div class="checkbox">
-            <label>
-              <input type="checkbox">
-              Leads com o mesmo endereço de email serão mesclados <span data-toggle="tooltip" data-placement="right" data-original-title="Opção disponível apenas para fluxos que não possuem segmentações na condição de entrada."><i class="xicon-exclamation-circle"></i></span> <br>
-              <smal class="checkbox-info-xs">
-                Caso esteja fazendo uma importação de Leads já existentes em sua base, para atualizar os <br>
-                dados por exemplo, o email não será duplicado e atualizaremos as informações fornecidas com base na última importação.
-              </small>
-            </label>
-            <br>
           </div>
         </div>
       </div>

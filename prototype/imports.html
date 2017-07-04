@@ -142,9 +142,9 @@
           <div class="row">
             <div class="col-xs-8">
               <ul class="nav nav-pills">
-                <li class="active"><a href="index.html">Leads</a></li>
+                <li><a href="index.html">Leads</a></li>
                 <li><a href="#">Empresas</a></li>
-                <li><a href="imports.html">Importações</a></li>
+                <li class="active"><a href="imports.html">Importações</a></li>
               </ul>
             </div>
             <div class="col-xs-4">
@@ -165,223 +165,187 @@
           </div>
         </div>
 
-        <section class="slats">
-          <form id="search_form" action="/leads" accept-charset="UTF-8" method="get">
-            <input name="utf8" type="hidden" value="✓">
-            <div class="row">
-              <div class="col-xs-7">
-                <div class="input-group">
-                  <span class="input-group-addon">Busca</span>
-                  <span class="twitter-typeahead" style="position: relative;"><input class="form-control tt-hint" type="text" autocomplete="off" spellcheck="off" disabled="" style="position: absolute; top: 0px; left: 0px; border-color: transparent; box-shadow: none; background: none 0% 0% / auto repeat scroll padding-box border-box rgb(255, 255, 255);"><input type="text" name="query" id="query" value="" class="form-control tt-query" autocomplete="off" spellcheck="false"></span>
-                </div>
-              </div>
-              <div class="col-xs-5 text-right">
-                <span class="text-muted btn-height">Existem 659 Leads na sua base</span>
-              </div>
-            </div>
-            <hr class="spacer-sm invisible">
-            <div class="slats-heading">
-              <div class="row row-gutter-xs">
-                <div class="col-xs-5">
-                  <div id="filter_leads_lists">
-                    <select name="segmentation_list" id="segmentation_list" class="form-control input-sm">
-                    <option selected="selected" value="50455">Todos os contatos da base de Leads</option>
-                    <option value="236137">converteu na landing page 1</option>
-                    <option value="50458">Clientes (estágio no funil)</option>
-                    <option value="474283">exemplo</option>
-                    <option value="50456">Leads (estágio no funil)</option>
-                    <option value="323007">Leads importados - linkedin-connections</option>
-                    <option value="323035">Leads importados - linkedin-connections-2</option>
-                    <option value="474290">nova-rd</option>
-                    <option value="50459">Oportunidades</option>
-                    <option value="474354">outlook</option>
-                    <option value="50457">Leads Qualificados (estágio no funil)</option>
-                    <option value="547046">remove-leads</option></select>
-                  </div>
-                </div>
-                <div class="col-xs-3">
-                  <span class="btn-height-sm">659 Leads encontrados.</span>
-                </div>
-                <div class="col-xs-4">
-                  <div class="btn-group pull-right">
-                    <button type="button" class="btn btn-link btn-sm dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                      Ações <span class="caret"></span>
-                    </button>
-                    <ul class="dropdown-menu" role="menu">
-                      <li><a href="#" role="button" data-toggle="modal">Adicionar tag</a></li>
-                      <li><a href="#" role="button" data-toggle="modal">Remover tag</a></li>
-                      <li><a class="export-leads-modal-link" data-toggle="modal" data-has-access="true" role="button" href="#">Exportar tabela de Leads</a></li>
-                    </ul>
-                  </div>
-                  <div class="btn-group pull-right">
-                    <button type="button" class="btn btn-link btn-sm dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                      Ordenação <span class="caret"></span>
-                    </button>
-                    <ul class="dropdown-menu" role="menu">
-                      <li class="active"><a href="#">Última conversão</a></li>
-                      <li><a href="#">Lead Score: Perfil</a></li>
-                      <li><a href="#">Lead Score: Interesse</a></li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </form>
-
-          <div id="leads-list" class="slat-group">
-            <article class="slat-group-item">
+        <section id="table-campaigns-sent sent" class="slats" data-group-wrapper="campaigns-index">
+          <div id="leads-list" class="slat-group" data-group-id="sent_campaigns">
+            <article class="slat-group-item js-email-mkt-sent">
               <header class="slat-heading">
-                <div class="row row-gutter-xs">
+                <div class="row">
                   <div class="col-xs-10">
-                    <h1 class="slat-title text-line-break">
-                      <span class="info-opportunity"><i class="xicon-star2 disabled"></i></span>
-                      <span class="lead-name"><a href="#" title="Clique aqui para editar" class="edit-info-link">Fulano Da Silva</a></span>
-                      <span class="job-company-name">Diretor | <a href="#">Resultados Digitais</a></span>
-                    </h1>
-                  </div>
-                  <div class="col-xs-2 text-right"></div>
-                </div>
-              </header>
-              <div class="slat-body">
-                <div class="row row-gutter-xs">
-                  <div class="col-xs-2">
-                    <div class="lead-score-show fit-a">
-                      <span class="lead-score-show-fit">a</span><span class="lead-score-show-interest">0</span>
-                    </div>
-                  </div>
-                  <div class="col-xs-2">
-                    <div class="lg-number">
-                      <small>Conversões</small>
-                      <p class="number conversions">1</p>
-                    </div>
-                  </div>
-                  <div class="col-xs-2">
-                    <div class="lg-number">
-                      <small>Última conversão</small>
-                      <p class="number">
-                        <time class="last_conversion_time timeago" datetime="2017-04-03T17:06:20-03:00">há 3 meses</time>
-                      </p>
-                    </div>
-                  </div>
-                  <div class="col-xs-1">
-                    <i class="xicon-arrow4-right conversion-icon"></i>
-                  </div>
-                  <div class="col-xs-2">
-                    <div class="lg-number">
-                      <small class="word-break-word">template-importar-leads</small>
-                    </div>
-                  </div>
-                  <div class="col-xs-3">
-                    <div class="tag-wrapper tags">
-                      <span class="label label-tag label-icon"><i class="xicon-tags"></i></span>
-                      <span id="tag-150869882-0" class="label label-tag">pagina-contato</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </article>
-
-            <article class="slat-group-item">
-              <header class="slat-heading">
-                <div class="row row-gutter-xs">
-                  <div class="col-xs-10">
-                    <h1 class="slat-title text-line-break">
-                      <span class="info-opportunity"><i class="xicon-star2 disabled"></i></span>
-                      <span class="lead-name"><a href="#" title="Clique aqui para editar" class="edit-info-link">elisandroengel@gmail.com</a></span>
-                      <span class="job-company-name"></span>
+                    <h1 class="slat-title word-break-word">
+                      <a href="/dxtr/v0_2/email/estatisticas">nome do meu email 1</a>
                     </h1>
                   </div>
                   <div class="col-xs-2 text-right">
+                    <!-- Split button -->
+                    <div class="btn-group">
+                      <a class="btn btn-default btn-xs" href="/dxtr/v0_2/email/estatisticas">Estatísticas</a>
+                      <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <span class="caret"></span>
+                        <span class="sr-only">Toggle Dropdown</span>
+                      </button>
+                      <ul class="dropdown-menu dropdown-menu-right">
+                        <li><a href="#">Eventos</a></li>
+                        <li><a href="#">Duplicar</a></li>
+                      </ul>
+                    </div>
                   </div>
                 </div>
               </header>
               <div class="slat-body">
-                <div class="row row-gutter-xs">
-                  <div class="col-xs-2">
-                    <div class="lead-score-show fit-d">
-                      <span class="lead-score-show-fit">d</span>
-                      <span class="lead-score-show-interest">0</span>
+                <div class="row">
+                  <div class="col-xs-4">
+                    <time class="text-muted small">Teste A/B <small>(Beta)</small>:<br><strong>Enviado</strong> em 12/6/2016 às 16h22min</time>
+                  </div>
+                  <div class="col-xs-2 text-right total-leads">
+                    <div class="lg-number">
+                      <small>Selecionados</small>
+                      <p class="number">96.924</p>
                     </div>
                   </div>
-                  <div class="col-xs-2">
+                  <div class="col-xs-2 text-right opened-emails">
                     <div class="lg-number">
-                      <small>Conversões</small>
-                      <p class="number conversions">1</p>
-                    </div>
-                  </div>
-                  <div class="col-xs-2">
-                    <div class="lg-number">
-                      <small>Última conversão</small>
+                      <small>Abertura</small>
                       <p class="number">
-                        <time class="last_conversion_time timeago" datetime="2016-10-03T14:36:49-03:00">há 9 meses</time>
+                        <span class="total">10,87<small style="display: inline-block;">%</small></span>
                       </p>
                     </div>
                   </div>
-                  <div class="col-xs-1">
-                    <i class="xicon-arrow4-right conversion-icon"></i>
-                  </div>
-                  <div class="col-xs-2">
+                  <div class="col-xs-2 text-right clicked-emails">
                     <div class="lg-number">
-                      <small class="word-break-word">lista-ttph</small>
+                      <small>Cliques</small>
+                      <p class="number">
+                        <span class="total">1,39<small style="display: inline-block;">%</small></span>
+                      </p>
                     </div>
                   </div>
-                  <div class="col-xs-3">
+                  <div class="col-xs-2 text-right unsubscribed-emails">
+                    <div class="lg-number">
+                      <small>Descadastros</small>
+                      <p class="number">2</p>
+                    </div>
                   </div>
                 </div>
               </div>
-            </article>
-
-            <article class="slat-group-item">
+            </article><article class="slat-group-item js-email-mkt-sent">
               <header class="slat-heading">
-                <div class="row row-gutter-xs">
+                <div class="row">
                   <div class="col-xs-10">
-                    <h1 class="slat-title text-line-break">
-                      <span class="info-opportunity"><i class="xicon-star2 disabled"></i></span>
-                      <span class="lead-name"><a href="#" title="Clique aqui para editar" class="edit-info-link">helena.peske@hotmail.com</a></span>
-                      <span class="job-company-name"></span>
+                    <h1 class="slat-title word-break-word">
+                      <a href="/dxtr/v0_2/email/estatisticas">nome do meu email 2</a>
                     </h1>
                   </div>
                   <div class="col-xs-2 text-right">
+                    <!-- Split button -->
+                    <div class="btn-group">
+                      <a class="btn btn-default btn-xs" href="/dxtr/v0_2/email/estatisticas">Estatísticas</a>
+                      <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <span class="caret"></span>
+                        <span class="sr-only">Toggle Dropdown</span>
+                      </button>
+                      <ul class="dropdown-menu dropdown-menu-right">
+                        <li><a href="#">Eventos</a></li>
+                        <li><a href="#">Duplicar</a></li>
+                      </ul>
+                    </div>
                   </div>
                 </div>
               </header>
               <div class="slat-body">
-                <div class="row row-gutter-xs">
-                  <div class="col-xs-2">
-                    <div class="lead-score-show fit-d">
-                      <span class="lead-score-show-fit">d</span>
-                      <span class="lead-score-show-interest">0</span>
+                <div class="row">
+                  <div class="col-xs-4">
+                    <time class="text-muted small">Email Marketing:<br><strong>Enviado</strong> em 12/3/2016 às 16h23min</time>
+                  </div>
+                  <div class="col-xs-2 text-right total-leads">
+                    <div class="lg-number">
+                      <small>Selecionados</small>
+                      <p class="number">96.924</p>
                     </div>
                   </div>
-                  <div class="col-xs-2">
+                  <div class="col-xs-2 text-right opened-emails">
                     <div class="lg-number">
-                      <small>Conversões</small>
-                      <p class="number conversions">1</p>
-                    </div>
-                  </div>
-                  <div class="col-xs-2">
-                    <div class="lg-number">
-                      <small>Última conversão</small>
+                      <small>Abertura</small>
                       <p class="number">
-                        <time class="last_conversion_time timeago" datetime="2016-10-03T14:36:49-03:00">há 9 meses</time>
+                        <span class="total">10,87<small style="display: inline-block;">%</small></span>
                       </p>
                     </div>
                   </div>
-                  <div class="col-xs-1">
-                    <i class="xicon-arrow4-right conversion-icon"></i>
-                  </div>
-                  <div class="col-xs-2">
+                  <div class="col-xs-2 text-right clicked-emails">
                     <div class="lg-number">
-                      <small class="word-break-word">lista-ttph</small>
+                      <small>Cliques</small>
+                      <p class="number">
+                        <span class="total">1,39<small style="display: inline-block;">%</small></span>
+                      </p>
                     </div>
                   </div>
-                  <div class="col-xs-3">
+                  <div class="col-xs-2 text-right unsubscribed-emails">
+                    <div class="lg-number">
+                      <small>Descadastros</small>
+                      <p class="number">2</p>
+                    </div>
                   </div>
                 </div>
               </div>
-            </article>
-          </div>
-        </section>
+            </article><article class="slat-group-item js-email-mkt-sent">
+              <header class="slat-heading">
+                <div class="row">
+                  <div class="col-xs-10">
+                    <h1 class="slat-title word-break-word">
+                      <a href="/dxtr/v0_2/email/estatisticas">nome do meu email 3</a>
+                    </h1>
+                  </div>
+                  <div class="col-xs-2 text-right">
+                    <!-- Split button -->
+                    <div class="btn-group">
+                      <a class="btn btn-default btn-xs" href="/dxtr/v0_2/email/estatisticas">Estatísticas</a>
+                      <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <span class="caret"></span>
+                        <span class="sr-only">Toggle Dropdown</span>
+                      </button>
+                      <ul class="dropdown-menu dropdown-menu-right">
+                        <li><a href="#">Eventos</a></li>
+                        <li><a href="#">Duplicar</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </header>
+              <div class="slat-body">
+                <div class="row">
+                  <div class="col-xs-4">
+                    <time class="text-muted small">Email Marketing:<br><strong>Enviado</strong> em 12/3/2016 às 16h23min</time>
+                  </div>
+                  <div class="col-xs-2 text-right total-leads">
+                    <div class="lg-number">
+                      <small>Selecionados</small>
+                      <p class="number">96.924</p>
+                    </div>
+                  </div>
+                  <div class="col-xs-2 text-right opened-emails">
+                    <div class="lg-number">
+                      <small>Abertura</small>
+                      <p class="number">
+                        <span class="total">10,87<small style="display: inline-block;">%</small></span>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="col-xs-2 text-right clicked-emails">
+                    <div class="lg-number">
+                      <small>Cliques</small>
+                      <p class="number">
+                        <span class="total">1,39<small style="display: inline-block;">%</small></span>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="col-xs-2 text-right unsubscribed-emails">
+                    <div class="lg-number">
+                      <small>Descadastros</small>
+                      <p class="number">2</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article></div>
+          </section>
       </div>
     </section>
   </body>
