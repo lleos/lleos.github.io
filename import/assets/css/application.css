@@ -15823,3 +15823,9 @@ body.steps .nav-steps li.active span {
 .bootstrap-growl {
     z-index: 999999 !important
 }
+
+/**/
+.details-import {
+  /*border-top: 1px dotted #f4f5f8;*/
+  padding: 10px 10px 0;
+}

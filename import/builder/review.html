@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>RD Station Prototype</title>
     <link rel="stylesheet" href="../assets/css/application.css">
-    <link rel="stylesheet" href="../assets/css/email_flow.css">
+    <link rel="stylesheet" href="../assets/css/import.css">
     <link rel="shortcut icon" href="../assets/images/apple-touch-icon-57x57.png">
   </head>
 
@@ -50,13 +50,6 @@
         </div>
         <div class="header-navbar-breadcrumb">
           <a class="header-navbar-link" href="../index.html">Base de Leads</a>
-          <a class="header-navbar-link" data-toggle="modal" data-target="#email_settings" href="#email_settings">
-            <span class="email-name">
-              <span id="email_settings_name">
-                Nome-do-arquivo
-              </span>
-            </span>
-          </a>
         </div>
         <div class="header-navbar-actions header-navbar-actions-right">
           <a class="header-navbar-link" href="../index.html">Sair do modo de edição</a>
@@ -67,7 +60,7 @@
       <nav class="subheader">
         <div class="subheader-container">
           <div class="actions-wrapper actions-wrapper-sm">
-            <a class="btn btn-default btn-sm subheader-btn go-rewind" href="../builder/review.html">Voltar</a>
+            <a class="btn btn-default btn-sm subheader-btn go-rewind" href="../builder/choose.html">Voltar</a>
           </div>
           <div class="steps-wrapper steps-wrapper-sm">
             <ul class="steps" data-step="recipients">
@@ -76,21 +69,13 @@
                   <a class="nav-link" href="../builder/choose.html">Escolher</a>
                 </span>
               </li>
-              <li class="">
+              <li class="active">
                 <span>
                   <a class="nav-link" href="../builder/review.html">Revisar</a>
                 </span>
               </li>
-              <li class="">
-                <span>
-                  <a class="nav-link" href="../builder/upload-file.html">Carregar</a>
-                </span>
-              </li>
-              <li class="active">
-                <span>
-                  <a class="nav-link" href="../builder/configure.html">Configurar</a>
-                </span>
-              </li>
+              <li><span>Carregar</span></li>
+              <li><span>Configurar</span></li>
               <li><span>Combinar</span></li>
               <li><span>Confirmar</span></li>
             </ul>
@@ -98,68 +83,96 @@
 
           <div class="actions-wrapper actions-wrapper-right actions-wrapper-sm">
             <a class="btn btn-link btn-sm subheader-btn" href="../index.html">Cancelar</a>
-            <a class="btn btn-link btn-sm subheader-btn" href="../imports.html">Salvar e sair</a>
-            <p class="hide text-muted small builder-text">Configure a importação para avançar</p>
-            <a class="btn btn-primary btn-sm subheader-btn go-forward" href="../builder/combine-fields.html">Salvar e avançar</a>
+            <p class="hide btn-height-sm text-muted small builder-text">Complete a revisão para avançar</p>
+            <a class="btn btn-primary btn-sm subheader-btn go-forward" href="../builder/upload-file.html">Salvar e avançar</a>
           </div>
         </div>
       </nav>
 
       <div class="container main-content">
-        <h4>Configure sua importação</h4>
+        <h4>Revise o arquivo antes de importa-lo</h4>
         <hr class="spacer-md">
         <hr class="invisible spacer-md">
-        <div class="col-xs-6 col-xs-pull-0">
-          <div class="form-group">
-            <label for="" style="font-weight: 400;">Você pretende realizar essa importação para?</label>
-            <div class="form-inline">
-              <select id="" class="form-control" style="width: 100%;">
-                <option value="">Selecione uma opção</option>
-                <option value="">Atualização - incluir dados que obtive offiline, em eventos ou conversas comerciais</option>
-                <option value="">Atualização - incluir dados que estão em outra ferramenta que não tem integração</option>
-                <option value="">Inclusão - Leads gerados offline, em eventos ou conversas comerciais</option>
-                <option value="">Inclusão - Estou trazendo meus Leads de outra ferramenta de email marketing</option>
-                <option value="">Inclusão - Leads em outro sistema que não tem integração</option>
-                <option value="">Segmentação - O critério que usei não é possível de construir no RD Station</option>
-                <option value="">Segmentação -  A informação que usei como critério não está no RD Station</option>
-              </select>
-            </div>
-            <small class="help-block">Selecione uma ou mais opções conforme o seu caso de uso.</small>
+        <h4 >Revise o formato do arquivo</h4>
+        <hr class="invisible spacer-xs">
+        <div class="form-group">
+          <div class="checkbox">
+            <label>
+              <input type="checkbox">
+              O arquivo está em formato .CSV? <span data-toggle="tooltip" data-placement="right" data-original-title="Opção disponível apenas para fluxos que não possuem segmentações na condição de entrada."><i class="xicon-exclamation-circle"></i></span> <br>
+              <smal class="checkbox-info-xs">
+                Usando o Excel? Salve a sua tabela no formato CSV usando "Salvar como", <br>
+                em seguida vá em "Tipo" e selecione a opção "CSV (Separado por vírgulas)".
+              </small>
+            </label>
           </div>
-
-          <div class="form-group">
-            <label for="" style="font-weight: 400;">Nome da importação</label>
-            <input id="" type="text" class="form-control" placeholder="Nome-do-arquivo">
-            <small class="help-block">
-              Utilize um nome de fácil memorização. Criaremos uma segmentação a partir dele.</small>
+        </div>
+        <div class="form-group">
+          <div class="checkbox">
+            <label>
+              <input type="checkbox">
+              O arquivo está codificado como Unicode (UTF-8)? <span data-toggle="tooltip" data-placement="right" data-original-title="Opção disponível apenas para fluxos que não possuem segmentações na condição de entrada."><i class="xicon-exclamation-circle"></i></span> <br>
+              <smal class="checkbox-info-xs">
+                Usando o Excel? Vá em "ferramentas" e escolha "Opções de web" e acesse a aba <br>
+                "Codificação" e em "Salvar este documento" selecione a opção "Unicode (UFT-8)".
+              </small>
+            </label>
+            <br>
+            <br>
           </div>
+        </div>
 
-          <div class="form-group">
-            <label for="email_name" style="font-weight: 400;">Registrar conversão no histórico do Lead?</label> <small class="pull-right"><a href="" class="btn-link">O que é isso?</a></small>
-            <div class="form-inline">
-              <select id="selPriority" class="form-control" style="width: 100%;">
-                <option value="">Selecione uma opção</option>
-                <option value="">Não registrar conversão para Leads que já existem em sua base.</option>
-                <option value="">Registrar conversões para todos os Leads.</option>
-              </select>
-            </div>
-            <small class="help-block">Gere uma conversão para novos Leads ou opte por não gerar conversão se estiver apenas atualizando dados.</small>
+        <h4 >Revise o conteúdo do arquivo</h4>
+        <hr class="invisible spacer-xs">
+
+        <div class="form-group">
+          <div class="checkbox">
+            <label>
+              <input type="checkbox">
+              As colunas possuem cabeçalho? <span data-toggle="tooltip" data-placement="right" data-original-title="Opção disponível apenas para fluxos que não possuem segmentações na condição de entrada."><i class="xicon-exclamation-circle"></i></span> <br>
+              <smal class="checkbox-info-xs">
+                O RD Station usa os cabeçalhos da primeira linha para corresponder as colunas com  <br>
+                os campos combinados. Certifique-se de que todas as colunas possuem cabeçalho.
+              </small>
+            </label>
           </div>
-
-          <div class="conversion-info js-conversion-info" style="display: none;">
-            <div class="form-group">
-              <label for="conversion-date" style="font-weight: 400;">Data da conversão</label>
-              <small>(dd/mm/aaaa)</small>
-              <div class="input-group date">
-                <span class="input-group-addon">
-                  <span class="xicon-calendar"></span>
-                </span>
-                <input class="form-control date-picker" value="03/07/2017" type="text" name="lead_import[conversion_date]" id="lead_import_conversion_date">
-              </div>
-              <small class="help-block">Insira a data correspondente a conversão.</small>
-            </div>
+        </div>
+        <div class="form-group">
+          <div class="checkbox">
+            <label>
+              <input type="checkbox">
+              Existe apenas uma coluna chamada "email" no arquivo? <span data-toggle="tooltip" data-placement="right" data-original-title="Opção disponível apenas para fluxos que não possuem segmentações na condição de entrada."><i class="xicon-exclamation-circle"></i></span> <br>
+              <smal class="checkbox-info-xs">
+                O Lead é gerado no RD Station através do email. Caso o arquivo possua mais de uma <br>
+                coluna com o dado de email, ou não possua dado na coluna, o Lead não será convertido.
+              </small>
+            </label>
           </div>
-
+        </div>
+        <div class="form-group">
+          <div class="checkbox">
+            <label>
+              <input type="checkbox">
+              Existem espaços em branco no arquivo? <span data-toggle="tooltip" data-placement="right" data-original-title="Opção disponível apenas para fluxos que não possuem segmentações na condição de entrada."><i class="xicon-exclamation-circle"></i></span> <br>
+              <smal class="checkbox-info-xs">
+                Espaços em branco antes ou depois de informações contidas nas células e linhas duplicadas <br>
+                podem interferir na aprovação de seu arquivo.
+              </small>
+            </label>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="checkbox">
+            <label>
+              <input type="checkbox">
+              Leads com o mesmo endereço de email serão mesclados <span data-toggle="tooltip" data-placement="right" data-original-title="Opção disponível apenas para fluxos que não possuem segmentações na condição de entrada."><i class="xicon-exclamation-circle"></i></span> <br>
+              <smal class="checkbox-info-xs">
+                Caso esteja fazendo uma importação de Leads já existentes em sua base, para atualizar os <br>
+                dados por exemplo, o email não será duplicado e atualizaremos as informações fornecidas com base na última importação.
+              </small>
+            </label>
+            <br>
+          </div>
         </div>
       </div>
     </section>
