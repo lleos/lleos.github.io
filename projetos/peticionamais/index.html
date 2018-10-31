@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peticionamais</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="font-awesome/css/all.css" rel="stylesheet">
+    <link href="css/plugins/iCheck/custom.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/jquery.steps.css" rel="stylesheet">
+    <link rel="icon" href="img/logo-color.png" type="image/gif">
+  </head>
+
+  <body>
+    <div id="wrapper">
+      <nav class="navbar-default navbar-static-side" role="navigation">
+        <div class="sidebar-collapse">
+          <ul class="nav metismenu" id="side-menu">
+            <li class="nav-header">
+              <div class="dropdown profile-element">
+                <a href="index.html">
+                  <span>
+                    <img alt="image" class="img-responsive" src="img/logo-peticionamais.png" />
+                  </span>
+                </a>
+              </div>
+              <div class="logo-element">
+                <a href="#">
+                  <img alt="image" class="img-circle" src="img/logo.png" />
+                </a>
+              </div>
+            </li>
+            <li>
+              <a href="#"><i class="fa fa-users"></i>
+                <span class="nav-label">Contatos</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fa fa-calendar-alt"></i>
+                <span class="nav-label">Agenda</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fa fa-comments"></i>
+                <span class="nav-label">Atendimentos</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fa fa-gavel"></i>
+                <span class="nav-label">Jurídico</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <div id="page-wrapper" class="gray-bg">
+        <div class="row border-bottom">
+          <nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0">
+            <ul class="nav navbar-top-links navbar-right">
+              <li class="">
+                <a href="#">
+                  <i class="fa fa-search"></i>
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
+                  <i class="fa fa-cog"></i>
+                </a>
+                <ul class="dropdown-menu dropdown-issues">
+                  <li>
+                    <a href="#">
+                      <div>
+                        <i class="fa fa-envelope fa-fw"></i> Studio PDF
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <div>
+                        <i class="fa fa-envelope fa-fw"></i>Calculadora de Prazos
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <div>
+                        <i class="fa fa-envelope fa-fw"></i>Modelos / Peças
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
+                  <i class="fa fa-bell"></i>
+                  <span class="label label-primary">1</span>
+                </a>
+                <ul class="dropdown-menu dropdown-alerts">
+                  <li>
+                    <a href="#">
+                      <div>
+                        <i class="fa fa-envelope fa-fw"></i> Você tem 2 mensagens
+                      </div>
+                    </a>
+                  </li>
+                  <li class="divider"></li>
+                  <li>
+                    <div class="text-center link-block">
+                      <a href="#">
+                        <strong>Veja todas as mensagens</strong>
+                      </a>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="login.html">
+                  <i class="fa fa-sign-out"></i> Sair
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="row wrapper border-bottom white-bg page-heading panel-heading">
+          <div class="col-lg-10">
+            <div class="navbar-header">
+              <a class="navbar-minimalize minimalize-styl-2" href="#">
+                <i class="fa fa-bars"></i>
+              </a>
+            </div>
+            <h2>Dashboard</h2>
+          </div>
+          <div class="col-lg-2">
+            <div class="btn-group pull-right" style="margin-top: 12px">
+              <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#myModal4">Peticionar</a>
+              <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <span class="caret"></span>
+                <span class="sr-only">Toggle Dropdown</span>
+              </button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#" data-toggle="modal" data-target="#myModal4">Petição Inicial</a></li>
+                <li><a class="dropdown-item" href="#">Petição Intermediária</a></li>
+                <li class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">Processo Automático</a></li>
+                <li><a class="dropdown-item" href="#">Processo Manual</a></li>
+                <li class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">Caso</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="wrapper wrapper-content">
+          <div class="row">
+            <div class="col-lg-3">
+              <div class="ibox ">
+                <div class="ibox-title">
+                  <div class="title-group">
+                    <h4>Petições ativas</h4>
+                    <span>Período de  tempo: Mensal</span>
+                  </div>
+                  <div class="ibox-tools">
+                      <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                          <i class="fa fa-ellipsis-h"></i>
+                      </a>
+                      <ul class="dropdown-menu dropdown-user">
+                          <li><a href="#" class="dropdown-item">Expandir</a></li>
+                          <li><a href="#" class="dropdown-item">Alterar período</a></li>
+                      </ul>
+                  </div>
+                </div>
+                <div class="ibox-content">
+                  <a href="">
+                    <h1 class="no-margins">11 <span>petições</span></h1>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3">
+              <div class="ibox ">
+                <div class="ibox-title">
+                  <div class="title-group">
+                    <h4>Petições arquivadas</h4>
+                    <span>Período de  tempo: Mensal</span>
+                  </div>
+                  <div class="ibox-tools">
+                      <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                          <i class="fa fa-ellipsis-h"></i>
+                      </a>
+                      <ul class="dropdown-menu dropdown-user">
+                          <li><a href="#" class="dropdown-item">Expandir</a></li>
+                          <li><a href="#" class="dropdown-item">Alterar período</a></li>
+                      </ul>
+                  </div>
+                </div>
+                <div class="ibox-content">
+                  <a href="">
+                    <h1 class="no-margins">06 <span>petições</span></h1>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3">
+              <div class="ibox ">
+                <div class="ibox-title">
+                  <div class="title-group">
+                    <h4>Petições com erro</h4>
+                    <span>Período de  tempo: Mensal</span>
+                  </div>
+                  <div class="ibox-tools">
+                      <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                          <i class="fa fa-ellipsis-h"></i>
+                      </a>
+                      <ul class="dropdown-menu dropdown-user">
+                          <li><a href="#" class="dropdown-item">Expandir</a></li>
+                          <li><a href="#" class="dropdown-item">Alterar período</a></li>
+                      </ul>
+                  </div>
+                </div>
+                <div class="ibox-content">
+                  <a href="">
+                    <h1 class="no-margins">01 <span>petição</span></h1>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3">
+              <div class="ibox ">
+                <div class="ibox-title">
+                  <div class="title-group">
+                    <h4>Petições Ag. Análise</h4>
+                    <span>Período de  tempo: Mensal</span>
+                  </div>
+                  <div class="ibox-tools">
+                      <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                          <i class="fa fa-ellipsis-h"></i>
+                      </a>
+                      <ul class="dropdown-menu dropdown-user">
+                          <li><a href="#" class="dropdown-item">Expandir</a></li>
+                          <li><a href="#" class="dropdown-item">Alterar período</a></li>
+                      </ul>
+                  </div>
+                </div>
+                <div class="ibox-content">
+                  <a href="">
+                    <h1 class="no-margins">07 <span>petições</span></h1>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="ibox">
+                <div class="ibox-title">
+                  <div class="title-group">
+                    <h4>Execução de consultas e peticionamentos</h4>
+                    <span>Período de  tempo: Diário</span>
+                  </div>
+                  <div class="ibox-tools">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                      <i class="fa fa-ellipsis-h"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-user">
+                      <li><a href="#" class="dropdown-item">Expandir</a></li>
+                      <li><a href="#" class="dropdown-item">Alterar período</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="ibox-content">
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th style="width:35%; padding-bottom:5px; color: #000;">Partes</th>
+                        <th style="width:25%; padding-bottom:5px; color: #000;">N° do Processos</th>
+                        <th style="width:30%; padding-bottom:5px; color: #000;">Status</th>
+                        <th style="width:10%; padding-bottom:5px; color: #000;">Ação</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <div class="feed-element">
+                            <div class="media-body ">
+                              <p>
+                                <span class="feed-profile">Crystiane Garcia <b>Vs</b> Estado do Paraná</span><br>
+                                <span class="feed-profile-info">Informe: 2377909</span>
+                              </p>
+                            </div>
+                          </div>
+                        </td>
+                        <td>
+                          <p>3214587-41.2017.3.76.2231</p>
+                        </td>
+                        <td>
+                          <p>
+                            <span class="feed-profile">Envio de Petição Intermediário</span><br>
+                            <span class="feed-profile-error">Número do processo não encontrado</span>
+                          </p>
+                        </td>
+                        <td>
+                          <a href="" class="btn btn-terciary btn-sm">Corrigir</a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="feed-element">
+                            <div class="media-body ">
+                              <p>
+                                <span class="feed-profile">João Rodrigo <b>Vs</b> Estado de Santa Catarina</span><br>
+                                <span class="feed-profile-info">Informe: 2377909</span>
+                              </p>
+                            </div>
+                          </div>
+                        </td>
+                        <td>
+                          <p>1236547-22.2018.4.21.9877</p>
+                        </td>
+                        <td>
+                          <p>
+                            <span class="feed-profile">Envio de Petição Intermediário</span><br>
+                            <span class="feed-profile-error">Há documentos sem o tipo ou descrição</span>
+                          </p>
+                        </td>
+                        <td>
+                          <a href="" class="btn btn-terciary btn-sm">Corrigir</a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="feed-element">
+                            <div class="media-body ">
+                              <p>
+                                <span class="feed-profile">José Dias <b>VS</b> Alessandro Munhoz</span><br>
+                                <span class="feed-profile-info">Informe: 2377909</span>
+                              </p>
+                            </div>
+                          </div>
+                        </td>
+                        <td>
+                          <p>10000278-88.2018.8.26.0701</p>
+                        </td>
+                        <td>
+                          <p>
+                            <span class="feed-profile">Envio de Petição Intermediário</span><br>
+                            <span class="feed-profile-error">Certificado sem registro no tribunal</span>
+                          </p>
+                        </td>
+                        <td>
+                          <a href="" class="btn btn-terciary btn-sm">Corrigir</a>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="ibox">
+                <div class="ibox-title">
+                  <div class="title-group">
+                    <h4>Publicações do Diário Oficial </h4>
+                    <span>Período de  tempo: Diário</span>
+                  </div>
+                  <div class="ibox-tools">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                      <i class="fa fa-ellipsis-h"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-user">
+                      <li><a href="#" class="dropdown-item">Expandir</a></li>
+                      <li><a href="#" class="dropdown-item">Alterar período</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="ibox-content">
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th style="width:20%; padding-bottom:5px; color: #000;">Publicação</th>
+                        <th style="width:20%; padding-bottom:5px; color: #000;">Nome</th>
+                        <th style="width:15%; padding-bottom:5px; color: #000;">Tribunal</th>
+                        <th style="width:15%; padding-bottom:5px; color: #000;">Disponibilizado</th>
+                        <th style="width:15%; padding-bottom:5px; color: #000;">Publicado</th>
+                        <th style="width:15%; padding-bottom:5px; color: #000;">Ação</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <div class="feed-element">
+                            <div class="media-body">
+                              <p class="limited">
+                                <span class="feed-profile">Revisão - Atos do juiz eleitoral Republicação de Sentença – AIJE – 242–98.2016 - Tribunal Regional Eleitoral do Paraná - 80ª Zona Eleitora</span><br>
+                                <span class="feed-profile-info">Processo: 2429820166160080</span>
+                              </p>
+                            </div>
+                          </div>
+                        </td>
+                        <td>
+                          <p class="limited alt">Fernando J Lafani N Ricciadrdi</p>
+                        </td>
+                        <td>
+                          <p>TRE-PR</p>
+                        </td>
+                        <td>
+                          <p>10/02/2019</p>
+                        </td>
+                        <td>
+                          <p><b>10/03/2019</b></p>
+                        </td>
+                        <td style="padding-bottom: 8px">
+                          <a href="" class="btn btn-terciary btn-sm">Detalhes</a>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td>
+                          <div class="feed-element">
+                            <div class="media-body">
+                              <p class="limited">
+                                <span class="feed-profile">Despacho - Tribunal Regional do Trabalho da 9ª Região - 04ª Vara do Trabalho de Londrina</span><br>
+                                <span class="feed-profile-info">Processo: 0001195-38.2016.5.09.0663</span>
+                              </p>
+                            </div>
+                          </div>
+                        </td>
+                        <td>
+                          <p class="limited alt">Fernando J Lafani N Ricciadrdi</p>
+                        </td>
+                        <td>
+                          <p>TRT-9</p>
+                        </td>
+                        <td>
+                          <p>10/01/2019</p>
+                        </td>
+                        <td>
+                          <p><b>10/02/2019</b></p>
+                        </td>
+                        <td style="padding-bottom: 8px">
+                          <a href="" class="btn btn-terciary btn-sm">Detalhes</a>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td>
+                          <div class="feed-element">
+                            <div class="media-body">
+                              <p class="limited">
+                                <span class="feed-profile">Despacho - Tribunal Regional do Trabalho da 9ª Região - 04ª Vara do Trabalho De Londrina</span><br>
+                                <span class="feed-profile-info">Processo: 0001195-38.2016.5.09.0663</span>
+                              </p>
+                            </div>
+                          </div>
+                        </td>
+                        <td>
+                          <p class="limited alt">Fernando J Lafani N Ricciadrdi</p>
+                        </td>
+                        <td>
+                          <p>TRT-9</p>
+                        </td>
+                        <td>
+                          <p>11/01/2018</p>
+                        </td>
+                        <td>
+                          <p><b>11/02/2018</b></p>
+                        </td>
+                        <td style="padding-bottom: 8px">
+                          <a href="" class="btn btn-terciary btn-sm">Detalhes</a>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="ibox">
+                <div class="ibox-title">
+                  <div class="title-group">
+                    <h4>Últimos contatos cadastrados</h4>
+                    <span>Período de  tempo: Semanal</span>
+                  </div>
+                  <div class="ibox-tools">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                      <i class="fa fa-ellipsis-h"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-user">
+                      <li><a href="#" class="dropdown-item">Expandir</a></li>
+                      <li><a href="#" class="dropdown-item">Alterar período</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="ibox-content">
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th style="width:40%; padding-bottom:5px; color: #000;">Nome</th>
+                        <th style="width:20%; padding-bottom:5px; color: #000;">Agendamento Aberto</th>
+                        <th style="width:20%; padding-bottom:5px; color: #000;">Total de Processos</th>
+                        <th style="width:20%; padding-bottom:5px; color: #000;">Total em Ações</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <a href="#">
+                            <div class="feed-element">
+                              <div class="float-left" style="margin-right: 10px">
+                                <img alt="image" class="rounded-circle" src="img/a5.jpg">
+                              </div>
+                              <div class="media-body ">
+                                <p>
+                                  <span class="feed-profile">Crystiane Garcia Zaparoli Ursi</span><br>
+                                  <span class="feed-profile-info">crystiane.garcia@advogados.com.br</span>
+                                </p>
+                              </div>
+                            </div>
+                          </a>
+                        </td>
+                        <td>1</td>
+                        <td>5</td>
+                        <td>R$ 460.263,00</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <a href="#">
+                            <div class="feed-element">
+                              <div class="float-left" style="margin-right: 10px">
+                                <img alt="image" class="rounded-circle" src="img/a4.jpg">
+                              </div>
+                              <div class="media-body ">
+                                <p>
+                                  <span class="feed-profile">Afonso Carlos Roberto do Prado</span><br>
+                                  <span class="feed-profile-info">afonso.carlos@adv.com.br</span>
+                                </p>
+                              </div>
+                            </div>
+                          </a>
+                        </td>
+                        <td>4</td>
+                        <td>5</td>
+                        <td>R$ 460.263,00</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <a href="#">
+                            <div class="feed-element">
+                              <div class="float-left" style="margin-right: 10px;">
+                                <img alt="image" class="rounded-circle" src="img/a2.jpg">
+                              </div>
+                              <div class="media-body">
+                                <p>
+                                  <span class="feed-profile">Daniel Patrarca</span><br>
+                                  <span class="feed-profile-info">daniel.patrarca@advogados.com.br</span>
+                                </p>
+                              </div>
+                            </div>
+                          </a>
+                        </td>
+                        <td>2</td>
+                        <td>5</td>
+                        <td>R$ 2.533,00</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal inmodal" id="myModal4" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content animated fadeIn">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">
+              <span aria-hidden="true">×</span>
+              <span class="sr-only">Close</span>
+            </button>
+            <i class="fa fa-clock-o modal-icon"></i>
+            <p class="modal-title">Iniciar Peticionamento</p>
+          </div>
+          <div class="modal-body">
+            <br>
+            <div class="form-group">
+              <select class="form-control m-b" name="account">
+                <option value="">Selecione a Justiça</option>
+                <option>Justiça do Trabalho</option>
+                <option>Justiça Federal</option>
+                <option>Tribunal de Justiça</option>
+                <option>Administrativo</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <select class="form-control m-b" name="account2">
+                <option value="">Selecione a Instância</option>
+                <option>1° Grau</option>
+                <option>2° Grau</option>
+              </select>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <a href="" type="button" class="btn btn-link" data-dismiss="modal">Cancelar</a>
+            <a href="peticionar.html" type="button" class="btn btn-primary">Avançar</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/jquery-2.1.1.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
+    <script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+    <script src="js/peticionamais.js"></script>
+    <script src="js/plugins/pace/pace.min.js"></script>
+
+  </body>
+</html>

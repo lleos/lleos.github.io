@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peticionamais</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="font-awesome/css/all.css" rel="stylesheet">
+    <link href="css/plugins/iCheck/custom.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/e-saj.css" rel="stylesheet">
+    <link rel="icon" href="img/logo-color.png" type="image/gif">
+  </head>
+
+  <body>
+    <div id="wrapper">
+      <nav class="navbar-default navbar-static-side" role="navigation">
+        <div class="sidebar-collapse">
+          <ul class="nav metismenu" id="side-menu">
+            <li class="nav-header">
+              <div class="dropdown profile-element">
+                <a href="index.html">
+                  <span>
+                    <img alt="image" class="img-responsive" src="img/logo-peticionamais.png" />
+                  </span>
+                </a>
+              </div>
+              <div class="logo-element">
+                <a href="index.html">
+                  <img alt="image" class="img-circle" src="img/logo.png" />
+                </a>
+              </div>
+            </li>
+            <li>
+              <a href="#"><i class="fa fa-users"></i>
+                <span class="nav-label">Contatos</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fa fa-calendar-alt"></i>
+                <span class="nav-label">Agenda</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fa fa-comments"></i>
+                <span class="nav-label">Atendimentos</span>
+              </a>
+            </li>
+            <li class="active">
+              <a href="#">
+                <i class="fa fa-gavel"></i>
+                <span class="nav-label">Jurídico</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <div id="page-wrapper" class="gray-bg">
+        <div class="row border-bottom">
+          <nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0">
+            <ul class="nav navbar-top-links navbar-right">
+              <li class="">
+                <a href="#">
+                  <i class="fa fa-search"></i>
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
+                  <i class="fa fa-cog"></i>
+                </a>
+                <ul class="dropdown-menu dropdown-issues">
+                  <li>
+                    <a href="#">
+                      <div>
+                        <i class="fa fa-envelope fa-fw"></i> Studio PDF
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <div>
+                        <i class="fa fa-envelope fa-fw"></i>Calculadora de Prazos
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <div>
+                        <i class="fa fa-envelope fa-fw"></i>Modelos / Peças
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
+                  <i class="fa fa-bell"></i>
+                  <span class="label label-primary">1</span>
+                </a>
+                <ul class="dropdown-menu dropdown-alerts">
+                  <li>
+                    <a href="#">
+                      <div>
+                        <i class="fa fa-envelope fa-fw"></i> Você tem 2 mensagens
+                      </div>
+                    </a>
+                  </li>
+                  <li class="divider"></li>
+                  <li>
+                    <div class="text-center link-block">
+                      <a href="#">
+                        <strong>Veja todas as mensagens</strong>
+                      </a>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="login.html">
+                  <i class="fa fa-sign-out"></i> Sair
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="row wrapper border-bottom white-bg page-heading panel-heading">
+          <div class="col-lg-4">
+            <div class="navbar-header">
+              <a class="navbar-minimalize minimalize-styl-2" href="#">
+                <i class="fa fa-bars"></i>
+              </a>
+            </div>
+            <h2>Petição Inicial</h2>
+          </div>
+          <div class="col-lg-8">
+            <div class="btn-group pull-right" style="margin-top: 12px">
+              <ul class="list-inline nav-list">
+                <li class=""><a href="index.html">Cancelar</a></li>
+                <li class=""><a href="#">Salvar e continuar depois</a></li>
+                <li class=""><a href="#" class="btn btn-primary">Protocolar</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="wrapper wrapper-content">
+          <div class="row">
+            <div class="petition-edit">
+              <form name="formCadastro" novalidate="" class="ng-pristine ng-invalid ng-invalid-required">
+                <div ng-disabled="peticao.preparandoEnvio">
+                  <div class="data-area show-login">
+                    <div class="col-xs-12 col-lg-7 ponto-focal">
+                      <div class="row full-height overflow-y--hidden">
+                        <div class="col-lg-11 col-lg-offset-1 pr-0">
+                          <!----> <!----><!---->
+                          <div class="document-list" ui-view="documentosDigitais" ng-if="!peticao.situacaoMostrar.comRecibo">
+                            <article class="documentos-digitais">
+                              <section class="documentos-digitais__body">
+                                <header class="documentos-digitais__header"> <!----></header>
+                                <main class="documentos-digitais__list" ng-class="{'height-auto': !_.isEmpty(peticao.documentosDigitais.outros)}" flow-name="flowDocPrincipal" flow-init="{target: getPathUploadDocumento, singleFile: true}" flow-attrs="{accept: 'application/pdf'}" flow-files-submitted="flowDocPrincipal.upload()" flow-error="falhaEnvioArquivo($file, $message)" flow-file-success="concluirEnvioArquivo($file)" flow-file-added="adicionarArquivo($file, true)"> <!---->
+                                  <div class="documentos-digitais__list__item__vazio" ng-if="!peticao.documentosDigitais.principal"> <!---->
+                                    <div class="is_drag" ng-if="!peticao.situacaoMostrar.apenasVisualizacao" flow-drop="">
+                                      <div class="documentos-digitais__list__item__vazio__inner">
+                                        <div class="documentos-digitais__list__item__vazio__image"></div>
+                                        <h4 class="documentos-digitais__list__item__vazio__text" aria-hidden="true"> Solte aqui o PDF dos documentos<br> elaborados ou </h4>
+                                        <button type="button" class="btn btn-secondary documentos-digitais__list__item--vazio__button" aria-label="Adicionar PDF dos documentos elaborados" name="button" focus-on-init="true" flow-attrs="{accept: 'application/pdf'}" flow-btn="" id="botaoAdicionarDocumento"> Selecionar PDF <input type="file" accept="application/pdf" style="visibility: hidden; position: absolute; width: 1px; height: 1px;">
+                                        </button>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </main>
+                              </section>
+                              <section class="documentos-digitais__footer" flow-name="flowOutros" flow-drop="" flow-init="{target: getPathUploadDocumento, name}" flow-attrs="{accept: 'application/pdf'}" flow-files-submitted="flowOutros.upload()" flow-error="falhaEnvioArquivo($file, $message)" flow-file-success="concluirEnvioArquivo($file)" flow-files-added="adicionarArquivo($files)">
+
+                              </section>
+                            </article>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xs-12 col-lg-5 b-l eb-l overflow-y--auto overflow-x--hidden full-height bg-gray">
+                      <div>
+                        <div class="petition-data">
+
+                          <div class="panel-group" role="tablist" id="accordion" aria-multiselectable="true">
+                            <div class="panel panel-default">
+                              <div class="panel-heading panel-edition" role="tab" id="headingOne">
+                                <h4 class="panel-title">Dados Básicos</h4>
+                                <a href="#collapseOne" role="button" data-toggle="collapse" data-parent="#accordion" aria-expanded="false" aria-controls="collapseOne" class=" btn btn-terciary collapsed pull-right"> Informar <i class="fa fa-pen"></i> </a>
+                              </div>
+                              <div class="panel-collapse collapse" role="tabpanel" id="collapseOne" aria-labelledby="headingOne" aria-expanded="false" style="height: 0px;">
+                                <div class="panel-body">
+                                  <div class="row">
+                                    <div class="col-xs-6">
+                                      <div class="form-group">
+                                        <label for="justica">Justiça</label>
+                                        <select class="form-control m-b" name="justica">
+                                          <option value=""></option>
+                                          <option value="" selected>Justiça do Trabalho</option>
+                                          <option value="">Justiça Federal</option>
+                                          <option value="">Tribunal de Justiça</option>
+                                          <option value="">Administrativo</option>
+                                        </select>
+                                      </div>
+                                    </div>
+                                    <div class="col-xs-6">
+                                      <div class="form-group">
+                                        <label for="justica">Instância</label>
+                                        <select class="form-control m-b" name="justica">
+                                          <option value=""></option>
+                                          <option value="" selected>1° Grau</option>
+                                          <option value="">2° Grau</option>
+                                        </select>
+                                      </div>
+                                    </div>
+                                  </div>
+
+                                  <div class="row">
+                                    <div class="col-xs-6">
+                                      <div class="form-group">
+                                        <label for="justica">Tribunal</label>
+                                        <select class="form-control m-b" name="justica">
+                                          <option value=""></option>
+                                          <option value="">TJSC</option>
+                                          <option value="">TJMA</option>
+                                        </select>
+                                      </div>
+                                    </div>
+                                    <div class="col-xs-6">
+                                      <div class="form-group">
+                                        <label for="justica">Sigílo do Processo</label>
+                                        <select class="form-control m-b" name="justica">
+                                          <option value=""></option>
+                                          <option value="">Sem sigilo (Nível 0)</option>
+                                          <option value="">Segredo de Justiça (Nível 1)</option>
+                                        </select>
+                                      </div>
+                                    </div>
+                                  </div>
+
+                                  <div class="row">
+                                    <div class="col-xs-6">
+                                      <div class="form-group">
+                                        <label for="justica">Órgão</label>
+                                        <select class="form-control m-b" name="justica">
+                                          <option value=""></option>
+                                          <option value="">TRT10 - Comarca de Brasília-DF</option>
+                                          <option value="">TRT10 - Comarca de Dianópolis-TO</option>
+                                          <option value="">TRT10 - Comarca de Guaraí-TO</option>
+                                        </select>
+                                      </div>
+                                    </div>
+                                    <div class="col-xs-6">
+                                      <div class="form-group">
+                                        <label class="active" id="">Valor da Ação</label>
+                                        <select class="form-control m-b" name="justica">
+                                          <option value=""></option>
+                                        </select>
+                                      </div>
+                                    </div>
+                                  </div>
+
+                                  <div class="row">
+                                    <div class="col-xs-6">
+                                      <div class="form-group">
+                                        <label class="active" id="">Justiça Gratuita</label>
+                                        <select class="form-control m-b" name="justica">
+                                          <option value=""></option>
+                                          <option value="">Sim</option>
+                                          <option value="">Não</option>
+                                        </select>
+                                      </div>
+                                    </div>
+                                    <div class="col-xs-6">
+                                      <div class="form-group">
+                                        <label class="active" id="">Classe - CNJ</label>
+                                        <select class="form-control m-b" name="justica">
+                                          <option value=""></option>
+                                        </select>
+                                      </div>
+                                    </div>
+                                  </div>
+
+                                  <div class="row">
+                                    <div class="col-xs-12">
+                                      <div class="form-group">
+                                        <label class="active" id="">Assuntos - CNJ</label>
+                                        <select class="form-control m-b" name="justica">
+                                          <option value=""></option>
+                                        </select>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="row">
+                                    <div class="col-xs-12">
+                                      <div class="form-group">
+                                        <input type="checkbox" class="">
+                                        <label class="" for="" style="display: inline-block; position: relative;">Pedido urgente, liminar ou antecipação de tutela</label>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="panel-footer panel-footer-edition">
+                                  <a href="#collapseOne" role="button" data-toggle="collapse" data-parent="#accordion" aria-expanded="false" aria-controls="collapseOne" class="collapsed btn-link btn-sm"> Cancelar</a>|
+                                  <a href="#collapseOne" role="button" data-toggle="collapse" data-parent="#accordion" aria-expanded="false" aria-controls="collapseOne" class="collapsed"> <i class="fa fa-angle-up"></i> </a>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="panel panel-default">
+                              <div class="panel-heading panel-edition" role="tab" id="headingTwo">
+                                <h4 class="panel-title">
+                                  Partes e Representantes
+                                </h4>
+                                <a href="#collapseTwo" role="button" data-toggle="collapse" data-parent="#accordion" aria-expanded="false" aria-controls="collapseTwo" class=" btn btn-terciary collapsed pull-right"> Adicionar <i class="fa fa-plus-circle"></i> </a>
+                              </div>
+                              <div class="panel-collapse collapse" role="tabpanel" id="collapseTwo" aria-labelledby="headingTwo" aria-expanded="false" style="height: 0px;">
+                                <div class="panel-body">
+                                  <div class="row">
+                                    <div class="col-xs-6">
+                                      <div class="form-group">
+                                        <label for="">Contato</label>
+                                        <select class="form-control" name="">
+                                          <option value=""></option>
+                                          <option value="">Leonardo Salvador</option>
+                                        </select>
+                                      </div>
+                                    </div>
+                                    <div class="col-xs-6">
+                                      <div class="form-group">
+                                        <label for="">Tipo de Envolvimento</label>
+                                        <select class="form-control" name="">
+                                          <option value=""></option>
+                                          <option value="">Parte Ativa</option>
+                                          <option value="">Parte Passiva</option>
+                                        </select>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="row">
+                                    <div class="col-xs-6">
+                                      <div class="form-group">
+                                        <label for="">Envolvimento</label>
+                                        <select class="form-control m-b" name="">
+                                          <option value=""></option>
+                                          <option value="">Autor</option>
+                                        </select>
+                                      </div>
+                                    </div>
+                                    <div class="col-xs-6">
+                                      <div class="form-group">
+                                        <label for="">Cliente</label>
+                                        <select class="form-control " name="">
+                                          <option value=""></option>
+                                          <option value="">Sim</option>
+                                          <option value="">Não</option>
+                                        </select>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="panel-footer panel-footer-edition">
+                                  <a href="#collapseTwo" role="button" data-toggle="collapse" data-parent="#accordion" aria-expanded="false" aria-controls="collapseOne" class="collapsed btn-link btn-sm"> Cancelar</a>|
+                                  <a href="#collapseTwo" role="button" data-toggle="collapse" data-parent="#accordion" aria-expanded="false" aria-controls="collapseOne" class="collapsed"> <i class="fa fa-angle-up"></i> </a>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="panel panel-default">
+                              <div class="panel-heading panel-edition" role="tab" id="headingThree">
+                                <h4 class="panel-title">
+                                  Dados complementares
+                                </h4>
+                                <a href="#collapseThree" role="button" data-toggle="collapse" data-parent="#accordion" aria-expanded="false" aria-controls="collapseThree" class=" btn btn-terciary collapsed pull-right"> Informar <i class="fa fa-pen"></i> </a>
+                              </div>
+                              <div class="panel-collapse collapse" role="tabpanel" id="collapseThree" aria-labelledby="headingThree" aria-expanded="false" style="height: 0px;">
+                                <div class="panel-body">
+                                  <div class="row">
+                                    <div class="col-xs-6">
+                                      <div class="form-group">
+                                        <label for="">Título</label>
+                                        <select class="form-control" name="">
+                                          <option value=""></option>
+                                        </select>
+                                      </div>
+                                    </div>
+                                    <div class="col-xs-6">
+                                      <div class="form-group">
+                                        <label for="">Provisionamento</label>
+                                        <select class="form-control" name="">
+                                          <option value=""></option>
+                                          <option value="">Parte Ativa</option>
+                                          <option value="">Parte Passiva</option>
+                                        </select>
+                                      </div>
+                                    </div>
+                                   </div>
+                                </div>
+                                <div class="panel-footer panel-footer-edition">
+                                  <a href="#collapseThree" role="button" data-toggle="collapse" data-parent="#accordion" aria-expanded="false" aria-controls="collapseOne" class="collapsed btn-link btn-sm"> Cancelar</a>|
+                                  <a href="#collapseThree" role="button" data-toggle="collapse" data-parent="#accordion" aria-expanded="false" aria-controls="collapseOne" class="collapsed"> <i class="fa fa-angle-up"></i> </a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/jquery-2.1.1.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
+    <script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+    <script src="js/peticionamais.js"></script>
+    <script src="js/plugins/pace/pace.min.js"></script>
+
+    <script src="js/main.js"></script>
+
+  </body>
+</html>
