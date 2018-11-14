@@ -50,7 +50,7 @@
               </a>
             </li>
             <li>
-              <a href="#">
+              <a href="#" data-toggle="modal" data-target="#myModal4">
                 <i class="fa fa-gavel"></i>
                 <span class="nav-label">Jurídico</span>
               </a>
@@ -120,7 +120,7 @@
                 </ul>
               </li>
               <li>
-                <a href="login.html">
+                <a href="#">
                   <i class="fa fa-sign-out"></i> Sair
                 </a>
               </li>
@@ -139,19 +139,19 @@
           </div>
           <div class="col-lg-2">
             <div class="btn-group pull-right" style="margin-top: 12px">
-              <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#myModal4">Peticionar</a>
+              <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#myModal4">Criar Petição</a>
               <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <span class="caret"></span>
                 <span class="sr-only">Toggle Dropdown</span>
               </button>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#" data-toggle="modal" data-target="#myModal4">Petição Inicial</a></li>
-                <li><a class="dropdown-item" href="#">Petição Intermediária</a></li>
+                <li><a class="dropdown-item" href="#" data-toggle="modal" data-target="#myModal4">Criar Petição Inicial</a></li>
+                <li><a class="dropdown-item" href="peticao-intermediaria.html">Criar Petição Intermediária</a></li>
                 <li class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="#">Processo Automático</a></li>
-                <li><a class="dropdown-item" href="#">Processo Manual</a></li>
+                <li><a class="dropdown-item" href="#">Criar Processo Automático</a></li>
+                <li><a class="dropdown-item" href="#">Criar Processo Manual</a></li>
                 <li class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="#">Caso</a></li>
+                <li><a class="dropdown-item" href="#">Criar Caso</a></li>
               </ul>
             </div>
           </div>
@@ -163,7 +163,8 @@
               <div class="ibox ">
                 <div class="ibox-title">
                   <div class="title-group">
-                    <h4>Petições ativas</h4>
+                    <h4>Petições ativas  <i class="fa fa-question-circle" data-container="body" data-toggle="popover" data-placement="top" data-content="São petições iniciadas mas que ainda não foram protocoladas." data-original-title="" title="" aria-describedby=""></i></h4>
+
                     <span>Período de  tempo: Mensal</span>
                   </div>
                   <div class="ibox-tools">
@@ -187,7 +188,7 @@
               <div class="ibox ">
                 <div class="ibox-title">
                   <div class="title-group">
-                    <h4>Petições arquivadas</h4>
+                    <h4>Petições arquivadas <i class="fa fa-question-circle" data-container="body" data-toggle="popover" data-placement="top" data-content="São todas as petições finalizadas." data-original-title="" title="" aria-describedby=""></i></h4>
                     <span>Período de  tempo: Mensal</span>
                   </div>
                   <div class="ibox-tools">
@@ -211,8 +212,8 @@
               <div class="ibox ">
                 <div class="ibox-title">
                   <div class="title-group">
-                    <h4>Petições com erro</h4>
-                    <span>Período de  tempo: Mensal</span>
+                    <h4>Petições com erro <i class="fa fa-question-circle" data-container="body" data-toggle="popover" data-placement="top" data-content="São petições que por algum erro específico não foram protocoladas." data-original-title="" title="" aria-describedby=""></i></h4>
+                    <span>Período de  tempo: Diário</span>
                   </div>
                   <div class="ibox-tools">
                       <a class="dropdown-toggle" data-toggle="dropdown" href="#">
@@ -226,7 +227,7 @@
                 </div>
                 <div class="ibox-content">
                   <a href="">
-                    <h1 class="no-margins">01 <span>petição</span></h1>
+                    <h1 class="no-margins">03 <span>petições</span></h1>
                   </a>
                 </div>
               </div>
@@ -235,7 +236,7 @@
               <div class="ibox ">
                 <div class="ibox-title">
                   <div class="title-group">
-                    <h4>Petições Ag. Análise</h4>
+                    <h4>Petições Ag. Análise <i class="fa fa-question-circle" data-container="body" data-toggle="popover" data-placement="top" data-content="São petições que foram protocoladas e estão em análise." data-original-title="" title="" aria-describedby=""></i></h4>
                     <span>Período de  tempo: Mensal</span>
                   </div>
                   <div class="ibox-tools">
@@ -262,7 +263,7 @@
               <div class="ibox">
                 <div class="ibox-title">
                   <div class="title-group">
-                    <h4>Execução de consultas e peticionamentos</h4>
+                    <h4>Petições com erro</h4>
                     <span>Período de  tempo: Diário</span>
                   </div>
                   <div class="ibox-tools">
@@ -298,12 +299,12 @@
                           </div>
                         </td>
                         <td>
-                          <p>3214587-41.2017.3.76.2231</p>
+                          <p>-</p>
                         </td>
                         <td>
                           <p>
                             <span class="feed-profile">Envio de Petição Intermediário</span><br>
-                            <span class="feed-profile-error">Número do processo não encontrado</span>
+                            <span class="feed-profile-error">Documento sem o número do processo</span>
                           </p>
                         </td>
                         <td>
@@ -617,7 +618,7 @@
           </div>
           <div class="modal-footer">
             <a href="" type="button" class="btn btn-link" data-dismiss="modal">Cancelar</a>
-            <a href="peticionar.html" type="button" class="btn btn-primary">Avançar</a>
+            <a href="peticao-inicial.html" type="button" class="btn btn-primary">Avançar</a>
           </div>
         </div>
       </div>
