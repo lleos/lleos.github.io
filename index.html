@@ -78,10 +78,15 @@ mixpanel.init("5849be55fe53998ca7e5d389c3b76252");</script><!-- end Mixpanel -->
         </ul>
       </div>
       <script type="text/javascript">
+        mixpanel.track_links("#about", "click nav link", {
+            "referrer": document.referrer
+        });
+      </script>
+      <!-- <script type="text/javascript">
         mixpanel.track_links("#about a", "click nav link", {
           "referrer": document.referrer
         });
-      </script>
+      </script> -->
     </div>
 
     <div class="band intro">
